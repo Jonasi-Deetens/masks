@@ -1,0 +1,31 @@
+{
+    "id": "player_001",
+    "username": "player",
+    "avatar": "avatars/player_default.png",
+    "grade": 10,
+    "class": "A",
+    "currentMaskId": null,
+    "masksOwned": ["mask_ambition", "mask_trickster"],
+    "stats": {
+      "energy": 100,
+      "mood": "neutral",
+      "time": "08:00",
+      "reputation": 0
+    },
+    "relationships": {
+      "npc_001": 0,
+      "npc_002": 0
+    },
+    "inventory": [
+      {
+        "itemId": "item_001",
+        "quantity": 2
+      }
+    ],
+    "minigameProgress": {},
+    "eventsCompleted": [],
+    "location": "zone_entrance",
+    "createdAt": "2025-11-25T00:00:00Z",
+    "updatedAt": "2025-11-25T00:00:00Z"
+  }
+  

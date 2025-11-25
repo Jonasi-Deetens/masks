@@ -1,0 +1,204 @@
+{
+  "planName": "School Masks Narrative Game - Full Backend & Frontend Execution",
+  "description": "Complete plan for Cursor to generate a React Native single-player narrative game with full backend (tRPC + Prisma), main menu, zones, masks, NPCs, minigames, events, inventory, and time/mask mechanics.",
+  "inputs": {
+    "jsonFiles": [
+      "masks.json",
+      "npcs.json",
+      "zones.json",
+      "items.json",
+      "minigames.json",
+      "events.json",
+      "actions.json"
+    ],
+    "prismaSchema": "schema.prisma",
+    "frontendStructure": "React Native project with image-based zones, modals, HUD, main menu",
+    "backendStack": "Node.js + tRPC + Prisma + PostgreSQL (or SQLite offline)",
+    "auth": "optional local login with player save state"
+  },
+  "outputs": {
+    "database": "PostgreSQL (or SQLite) fully populated with relational links",
+    "tRPCBackend": "CRUD APIs for PlayerState, NPCs, Masks, Zones, Items, Minigames, Events, Actions",
+    "typescriptInterfaces": "All JSON schemas converted to TypeScript interfaces",
+    "reactNativeScreens": [
+      "MainMenuScreen",
+      "ZoneScreen(s)",
+      "HUD",
+      "DialogueModal",
+      "EventModal",
+      "MinigameScreen",
+      "InventoryModal",
+      "DayRecapScreen",
+      "MaskSelectionScreen",
+      "SettingsScreen"
+    ],
+    "managers": [
+      "ActionManager",
+      "EventManager",
+      "MaskManager",
+      "NPCManager",
+      "MinigameManager",
+      "InventoryManager",
+      "TimeManager",
+      "DialogueManager",
+      "ZoneManager"
+    ],
+    "gameplayLogic": [
+      "Time system per action",
+      "Mask effects and corruption tracking",
+      "NPC relationships & rumor system",
+      "Random and triggered events",
+      "Minigame integration",
+      "Zone navigation via hotspots",
+      "Nighttime exploration and spirit missions",
+      "Day recap with mask commentary",
+      "Inventory & item effect system",
+      "Main menu functionality (start, load, settings, credits, exit)"
+    ]
+  },
+  "executionSteps": [
+    {
+      "id": 1,
+      "name": "Backend Setup (tRPC + Prisma)",
+      "description": "Set up backend services for the game.",
+      "tasks": [
+        "Create Node.js project with tRPC server",
+        "Install Prisma and connect to PostgreSQL/SQLite",
+        "Generate Prisma client from schema.prisma",
+        "Create tRPC routers for: PlayerState, Masks, NPCs, Zones, Items, Minigames, Events, Actions",
+        "Implement CRUD and query endpoints for frontend consumption",
+        "Add data seeding script to populate database from JSON files",
+        "Ensure relational links between PlayerState and all entities"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Frontend: Main Menu Screen",
+      "description": "Implement main menu navigation.",
+      "tasks": [
+        "Create `MainMenuScreen.tsx` with buttons: Start Game, Load Game, Settings, Credits, Exit",
+        "Hook buttons to navigation stack",
+        "Start Game → MaskSelectionScreen → First Zone",
+        "Load Game → Fetch saved PlayerState from tRPC",
+        "Settings → Audio, Graphics, Difficulty, Controls",
+        "Credits → Show team/art references",
+        "Exit → Close app"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Database & Prisma Integration",
+      "description": "Link frontend to backend and ensure all queries work.",
+      "tasks": [
+        "Use Prisma client in tRPC resolvers",
+        "Expose endpoints to fetch Masks, NPCs, Zones, Items, Minigames, Events, Actions",
+        "Implement mutations for PlayerState updates (time, stats, inventory, relationships, mask selection)",
+        "Test relational queries: e.g., PlayerState → MasksOwned[], PlayerState → NPC relationships",
+        "Ensure offline SQLite fallback for singleplayer mode if needed"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Frontend Zone Navigation & Screens",
+      "description": "Implement all zones and hotspot interactions.",
+      "tasks": [
+        "Create `ZoneScreen.tsx` with ImageBackground per zone",
+        "Add clickable hotspots for: zone transitions, NPC interaction, item collection, actions, events",
+        "Trigger EventManager on zone entry",
+        "Handle mask overlays and effects per zone",
+        "Include night-only zones with unlock conditions"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Action System",
+      "description": "Time-based actions, preconditions, and effects.",
+      "tasks": [
+        "Implement ActionManager to execute actions",
+        "Check preconditions: masks, items, time of day, location",
+        "Update PlayerState via tRPC mutation",
+        "Trigger side-effects: NPC relationships, mask corruption, reputation, inventory changes"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "NPC & Dialogue System",
+      "description": "Dynamic dialogues, relationships, rumors, and mask effects.",
+      "tasks": [
+        "Load NPC data from backend",
+        "Implement dialogue trees influenced by mask effects and relationship levels",
+        "Update relationship scores and rumor propagation",
+        "Trigger events when certain thresholds reached",
+        "Add mask-specific dialogue variations and consequences"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Event Engine",
+      "description": "Random and triggered events, branching choices.",
+      "tasks": [
+        "Load events from backend",
+        "Check triggers on zone entry, player time, NPC states, mask selection",
+        "Execute choice effects: time, inventory, relationships, corruption, stats",
+        "Update PlayerState accordingly"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Minigame System",
+      "description": "Class-based minigames affected by masks.",
+      "tasks": [
+        "Load minigame templates from backend",
+        "Implement each minigame type (quiz, trace, scramble, QTE)",
+        "Apply mask bonuses/penalties to score",
+        "Update minigameProgress in PlayerState"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Mask & Night Mechanics",
+      "description": "Manage mask abilities, corruption, nighttime exploration.",
+      "tasks": [
+        "Implement MaskManager for selection, effect application, and corruption tracking",
+        "Unlock night zones and spirit missions",
+        "Trigger nightmares or bonus events based on corruption thresholds",
+        "Update PlayerState and save via tRPC"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "HUD, Inventory & Day Recap",
+      "description": "Show stats, items, mask effects, and recap each day.",
+      "tasks": [
+        "Create HUD: time, energy, mood, reputation, mask corruption",
+        "Implement InventoryModal: use items, check effects",
+        "Create DayRecapScreen: mask commentary, relationship updates, rumors, stats changes"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Time & Schedule Management",
+      "description": "Manage action-based time increments and daily schedule.",
+      "tasks": [
+        "TimeManager tracks time per action",
+        "Lock/unlock zones and actions based on time",
+        "Check for scheduled classes, free periods, after-school, and night exploration",
+        "Trigger events based on time windows"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Testing & Validation",
+      "description": "End-to-end testing of full game loop.",
+      "tasks": [
+        "Test main menu flow, save/load functionality",
+        "Validate backend tRPC queries/mutations",
+        "Test zone navigation and hotspot interactions",
+        "Verify mask selection, effects, corruption, and dialogue variations",
+        "Check NPC behavior, rumor propagation, and relationships",
+        "Validate events and minigame outcomes",
+        "Ensure HUD, Inventory, and DayRecap show correct state"
+      ]
+    }
+  ]
+}

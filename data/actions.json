@@ -1,5 +1,4 @@
 [
-  // ================== CLASSROOM ACTIONS ==================
   {
     "id": "pay_attention_math",
     "name": "Pay Attention in Math Class",
@@ -161,7 +160,6 @@
     "maskModifiers": {"Trickster Mask": {"hackBonus": 3}, "Ambition Mask": {"gradeBoost": 2}}
   },
 
-  // ================== HALLWAY / SOCIAL ACTIONS ==================
   {
     "id": "help_friend",
     "name": "Help a Friend",
@@ -193,7 +191,6 @@
     "maskModifiers": {"Trickster Mask": {"stealthBonus": 3}}
   },
 
-  // ================== CLUB / AFTER SCHOOL ==================
   {
     "id": "attend_art_club",
     "name": "Attend Art Club",
@@ -265,7 +262,6 @@
     "maskModifiers": {"Trickster Mask": {"hackBonus": 3}}
   },
 
-  // ================== NIGHT / MASK TASKS ==================
   {
     "id": "night_spirit_task",
     "name": "Complete Spirit Task",
@@ -297,7 +293,6 @@
     "maskModifiers": {"Fear Mask": {"dangerDetection": true}}
   },
 
-  // ================== ITEM USAGE ==================
   {
     "id": "use_item_energy_potion",
     "name": "Use Energy Potion",
@@ -359,7 +354,6 @@
     "maskModifiers": {"Ambition Mask": {"gradeBoost": 2}, "Trickster Mask": {"analysisBonus": 2}}
   },
 
-  // ================== ADDITIONAL HALLWAY / SOCIAL ACTIONS ==================
   {
     "id": "talk_to_crush",
     "name": "Talk to Crush",
@@ -391,7 +385,6 @@
     "maskModifiers": {"Rage Mask": {"intimidationBonus": 3}, "Joy Mask": {"popularityBonus": 2}}
   },
 
-  // ================== ADDITIONAL CLUB ACTIONS ==================
   {
     "id": "attend_cooking_club",
     "name": "Attend Cooking Club",
@@ -423,7 +416,6 @@
     "maskModifiers": {"Loyalty Mask": {"relationshipBonus": 2}} 
   },
 
-  // ================== ADDITIONAL NIGHT / MASK TASKS ==================
   {
     "id": "steal_memory_night",
     "name": "Steal a Memory",
@@ -465,7 +457,6 @@
     "maskModifiers": {"Trickster Mask": {"stealthBonus": 3}, "Fear Mask": {"awarenessBoost": 2}}
   },
 
-  // ================== ADDITIONAL ITEM USAGE ==================
   {
     "id": "use_item_confidence_potion",
     "name": "Use Confidence Potion",

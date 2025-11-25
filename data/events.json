@@ -1,0 +1,553 @@
+[
+    {
+      "id": "event_001",
+      "name": "Surprise Math Test",
+      "triggerChance": 30,
+      "triggerZones": ["classroom_math"],
+      "maskModifiers": {"Ambition Mask":{"bonus":"higherScore"},"Trickster Mask":{"bonus":"cheatChance"}},
+      "choices":[
+        {"id":"choice_001","text":"Cheat using mask ability","effect":{"time":15,"relationship":{"npc_001":-5},"corruption":5,"item":null}},
+        {"id":"choice_002","text":"Do your best honestly","effect":{"time":15,"relationship":{"npc_001":2},"corruption":0,"item":null}}
+      ]
+    },
+    {
+      "id": "event_002",
+      "name": "Lost Item Found",
+      "triggerChance": 20,
+      "triggerZones": ["hallway_2","club_room_art"],
+      "maskModifiers":{"Loyalty Mask":{"bonus":"relationshipBoost"}},
+      "choices":[
+        {"id":"choice_003","text":"Return it to owner","effect":{"time":10,"relationship":{"student_012":10},"corruption":0,"item":null}},
+        {"id":"choice_004","text":"Keep it","effect":{"time":5,"relationship":{"student_012":-10},"corruption":5,"item":null}}
+      ]
+    },
+    {
+      "id": "event_003",
+      "name": "Library Surprise",
+      "triggerChance": 25,
+      "triggerZones": ["library"],
+      "maskModifiers":{"Ambition Mask":{"bonus":"extraKnowledge"}},
+      "choices":[
+        {"id":"choice_005","text":"Study hard","effect":{"time":20,"relationship":{},"corruption":0,"item":"item_027"}},
+        {"id":"choice_006","text":"Nap secretly","effect":{"time":10,"relationship":{},"corruption":0,"item":null}}
+      ]
+    },
+    {
+      "id": "event_004",
+      "name": "Hallway Bully Encounter",
+      "triggerChance": 30,
+      "triggerZones": ["hallway_1"],
+      "maskModifiers":{"Rage Mask":{"bonus":"intimidate"},"Fear Mask":{"bonus":"avoid"}},
+      "choices":[
+        {"id":"choice_007","text":"Confront bully","effect":{"time":10,"relationship":{"student_003":-5},"corruption":5,"item":null}},
+        {"id":"choice_008","text":"Avoid quietly","effect":{"time":5,"relationship":{"student_003":2},"corruption":0,"item":null}}
+      ]
+    },
+    {
+      "id": "event_005",
+      "name": "Club Recruitment",
+      "triggerChance": 20,
+      "triggerZones": ["club_room_art","club_room_sports","club_room_music"],
+      "maskModifiers":{"Joy Mask":{"bonus":"popularity"}},
+      "choices":[
+        {"id":"choice_009","text":"Join club","effect":{"time":30,"relationship":{"npc_020":5},"corruption":0,"item":null}},
+        {"id":"choice_010","text":"Decline politely","effect":{"time":5,"relationship":{"npc_020":0},"corruption":0,"item":null}}
+      ]
+    },
+    {
+      "id": "event_006",
+      "name": "Teacher Approaches",
+      "triggerChance": 25,
+      "triggerZones": ["hallway_2","classroom_science"],
+      "maskModifiers":{"Trickster Mask":{"bonus":"distractTeacher"},"Fear Mask":{"bonus":"avoidConfrontation"}},
+      "choices":[
+        {"id":"choice_011","text":"Lie confidently","effect":{"time":5,"relationship":{"npc_001":-3},"corruption":3,"item":null}},
+        {"id":"choice_012","text":"Tell the truth","effect":{"time":5,"relationship":{"npc_001":2},"corruption":0,"item":null}}
+      ]
+    },
+    {
+      "id": "event_007",
+      "name": "Sneaky Hall Pass",
+      "triggerChance": 20,
+      "triggerZones": ["hallway_1","hallway_3"],
+      "maskModifiers":{"Trickster Mask":{"bonus":"sneak"}},
+      "choices":[
+        {"id":"choice_013","text":"Sneak to club room","effect":{"time":10,"relationship":{},"corruption":2,"item":null}},
+        {"id":"choice_014","text":"Go to class","effect":{"time":10,"relationship":{},"corruption":0,"item":null}}
+      ]
+    },
+    {
+      "id": "event_008",
+      "name": "Found Strange Note",
+      "triggerChance": 15,
+      "triggerZones": ["library","hallway_2"],
+      "maskModifiers":{"Ambition Mask":{"bonus":"curiosity"},"Fear Mask":{"bonus":"anxiety"}},
+      "choices":[
+        {"id":"choice_015","text":"Read it","effect":{"time":5,"relationship":{"npc_015":5},"corruption":1,"item":"item_045"}},
+        {"id":"choice_016","text":"Ignore it","effect":{"time":1,"relationship":{},"corruption":0,"item":null}}
+      ]
+    },
+    {
+      "id": "event_009",
+      "name": "Nighttime Spirit Visit",
+      "triggerChance": 20,
+      "triggerZones": ["player_home"],
+      "maskModifiers":{"Any Mask":{"bonus":"spiritInteraction"}},
+      "choices":[
+        {"id":"choice_017","text":"Accept mission","effect":{"time":30,"relationship":{},"corruption":5,"item":"item_046"}},
+        {"id":"choice_018","text":"Decline","effect":{"time":5,"relationship":{},"corruption":-1,"item":null}}
+      ]
+    },
+    {
+      "id": "event_010",
+      "name": "Food Fight in Cafeteria",
+      "triggerChance": 15,
+      "triggerZones": ["cafeteria"],
+      "maskModifiers":{"Rage Mask":{"bonus":"throwAccuracy"},"Joy Mask":{"bonus":"popularity"}},
+      "choices":[
+        {"id":"choice_019","text":"Join in","effect":{"time":10,"relationship":{"student_008":5},"corruption":2,"item":null}},
+        {"id":"choice_020","text":"Avoid it","effect":{"time":5,"relationship":{"student_008":-1},"corruption":0,"item":null}}
+      ]
+    },
+    {
+      "id": "event_011",
+      "name": "Accidentally Spill Drink",
+      "triggerChance": 20,
+      "triggerZones": ["hallway_1","cafeteria"],
+      "maskModifiers":{"Grief Mask":{"bonus":"apologize"},"Trickster Mask":{"bonus":"blameSomeone"}},
+      "choices":[
+        {"id":"choice_021","text":"Apologize","effect":{"time":5,"relationship":{"student_007":5},"corruption":0,"item":null}},
+        {"id":"choice_022","text":"Blame someone else","effect":{"time":5,"relationship":{"student_007":-5},"corruption":3,"item":null}}
+      ]
+    },
+    {
+      "id": "event_012",
+      "name": "Forgot Homework",
+      "triggerChance": 25,
+      "triggerZones": ["classroom_english","classroom_math"],
+      "maskModifiers":{"Ambition Mask":{"bonus":"reducePenalty"},"Fear Mask":{"bonus":"panic"}},
+      "choices":[
+        {"id":"choice_023","text":"Confess","effect":{"time":5,"relationship":{"npc_002":2},"corruption":0,"item":null}},
+        {"id":"choice_024","text":"Lie","effect":{"time":5,"relationship":{"npc_002":-3},"corruption":2,"item":null}}
+      ]
+    },
+    {
+      "id": "event_013",
+      "name": "Crush Notices You",
+      "triggerChance": 10,
+      "triggerZones": ["hallway_3","club_room_art"],
+      "maskModifiers":{"Joy Mask":{"bonus":"popularity"},"Ambition Mask":{"bonus":"confidence"}},
+      "choices":[
+        {"id":"choice_025","text":"Wave and smile","effect":{"time":1,"relationship":{"student_010":5},"corruption":0,"item":null}},
+        {"id":"choice_026","text":"Hide","effect":{"time":1,"relationship":{"student_010":-2},"corruption":0,"item":null}}
+      ]
+    },
+    {
+      "id": "event_014",
+      "name": "Rumor Spreads",
+      "triggerChance": 20,
+      "triggerZones": ["hallway_1","hallway_2","cafeteria"],
+      "maskModifiers":{"Trickster Mask":{"bonus":"spreadRumor"},"Grief Mask":{"bonus":"counterRumor"}},
+      "choices":[
+        {"id":"choice_027","text":"Participate","effect":{"time":5,"relationship":{"student_003":3},"corruption":2,"item":null}},
+        {"id":"choice_028","text":"Ignore","effect":{"time":5,"relationship":{"student_003":0},"corruption":0,"item":null}}
+      ]
+    },
+    {
+      "id": "event_015",
+      "name": "After-School Tutoring",
+      "triggerChance": 20,
+      "triggerZones": ["classroom_math","classroom_science"],
+      "maskModifiers":{"Ambition Mask":{"bonus":"studyBoost"}},
+      "choices":[
+        {"id":"choice_029","text":"Attend tutoring","effect":{"time":30,"relationship":{"npc_001":5},"corruption":0,"item":null}},
+        {"id":"choice_030","text":"Skip tutoring","effect":{"time":0,"relationship":{"npc_001":-3},"corruption":0,"item":null}}
+      ]
+    },
+    {
+        "id": "event_016",
+        "name": "Art Club Contest",
+        "triggerChance": 20,
+        "triggerZones": ["club_room_art"],
+        "maskModifiers":{"Ambition Mask":{"bonus":"focus"},"Joy Mask":{"bonus":"popularity"}},
+        "choices":[
+          {"id":"choice_031","text":"Participate","effect":{"time":30,"relationship":{"npc_021":5},"corruption":0,"item":"item_010"}},
+          {"id":"choice_032","text":"Watch quietly","effect":{"time":10,"relationship":{"npc_021":0},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_017",
+        "name": "Music Practice Mishap",
+        "triggerChance": 15,
+        "triggerZones": ["club_room_music"],
+        "maskModifiers":{"Trickster Mask":{"bonus":"improvise"}},
+        "choices":[
+          {"id":"choice_033","text":"Keep going","effect":{"time":15,"relationship":{"npc_022":2},"corruption":1,"item":null}},
+          {"id":"choice_034","text":"Apologize and stop","effect":{"time":5,"relationship":{"npc_022":0},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_018",
+        "name": "Sports Club Challenge",
+        "triggerChance": 20,
+        "triggerZones": ["club_room_sports","gym"],
+        "maskModifiers":{"Rage Mask":{"bonus":"strength"},"Fear Mask":{"bonus":"avoid"}},
+        "choices":[
+          {"id":"choice_035","text":"Compete aggressively","effect":{"time":20,"relationship":{"npc_023":3},"corruption":2,"item":null}},
+          {"id":"choice_036","text":"Sit out","effect":{"time":5,"relationship":{"npc_023":-2},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_019",
+        "name": "Science Lab Accident",
+        "triggerChance": 15,
+        "triggerZones": ["classroom_science"],
+        "maskModifiers":{"Fear Mask":{"bonus":"alertness"},"Ambition Mask":{"bonus":"focus"}},
+        "choices":[
+          {"id":"choice_037","text":"Help clean up","effect":{"time":10,"relationship":{"npc_004":5},"corruption":0,"item":null}},
+          {"id":"choice_038","text":"Avoid responsibility","effect":{"time":5,"relationship":{"npc_004":-3},"corruption":2,"item":null}}
+        ]
+      },
+      {
+        "id": "event_020",
+        "name": "Unexpected Exam Review",
+        "triggerChance": 25,
+        "triggerZones": ["classroom_math","classroom_english"],
+        "maskModifiers":{"Ambition Mask":{"bonus":"extraScore"}},
+        "choices":[
+          {"id":"choice_039","text":"Pay attention","effect":{"time":15,"relationship":{},"corruption":0,"item":"item_011"}},
+          {"id":"choice_040","text":"Daydream","effect":{"time":10,"relationship":{},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_021",
+        "name": "Library Book Mishap",
+        "triggerChance": 20,
+        "triggerZones": ["library"],
+        "maskModifiers":{"Grief Mask":{"bonus":"apologetic"},"Trickster Mask":{"bonus":"blameSomeone"}},
+        "choices":[
+          {"id":"choice_041","text":"Fix it yourself","effect":{"time":10,"relationship":{"npc_005":5},"corruption":0,"item":null}},
+          {"id":"choice_042","text":"Blame classmate","effect":{"time":5,"relationship":{"npc_005":-5},"corruption":2,"item":null}}
+        ]
+      },
+      {
+        "id": "event_022",
+        "name": "Cafeteria Lunch Mishap",
+        "triggerChance": 15,
+        "triggerZones": ["cafeteria"],
+        "maskModifiers":{"Rage Mask":{"bonus":"throw"}} ,
+        "choices":[
+          {"id":"choice_043","text":"Apologize","effect":{"time":5,"relationship":{"student_011":5},"corruption":0,"item":null}},
+          {"id":"choice_044","text":"Fight back","effect":{"time":10,"relationship":{"student_011":-5},"corruption":3,"item":null}}
+        ]
+      },
+      {
+        "id": "event_023",
+        "name": "Hallway Prank",
+        "triggerChance": 20,
+        "triggerZones": ["hallway_2"],
+        "maskModifiers":{"Trickster Mask":{"bonus":"prankSuccess"}},
+        "choices":[
+          {"id":"choice_045","text":"Prank a classmate","effect":{"time":10,"relationship":{"student_009":-2},"corruption":2,"item":null}},
+          {"id":"choice_046","text":"Ignore it","effect":{"time":5,"relationship":{"student_009":0},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_024",
+        "name": "Lost in Hallway",
+        "triggerChance": 15,
+        "triggerZones": ["hallway_1","hallway_3"],
+        "maskModifiers":{"Fear Mask":{"bonus":"avoidTeacher"},"Ambition Mask":{"bonus":"findShortcut"}},
+        "choices":[
+          {"id":"choice_047","text":"Ask for help","effect":{"time":5,"relationship":{"npc_006":2},"corruption":0,"item":null}},
+          {"id":"choice_048","text":"Try to sneak","effect":{"time":5,"relationship":{"npc_006":-1},"corruption":2,"item":null}}
+        ]
+      },
+      {
+        "id": "event_025",
+        "name": "After School Study Group",
+        "triggerChance": 20,
+        "triggerZones": ["library","classroom_english"],
+        "maskModifiers":{"Ambition Mask":{"bonus":"studyBoost"}},
+        "choices":[
+          {"id":"choice_049","text":"Join group","effect":{"time":30,"relationship":{"npc_007":5},"corruption":0,"item":null}},
+          {"id":"choice_050","text":"Skip group","effect":{"time":0,"relationship":{"npc_007":-2},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_026",
+        "name": "Nighttime Mask Whisper",
+        "triggerChance": 25,
+        "triggerZones": ["player_home"],
+        "maskModifiers":{"Any Mask":{"bonus":"spiritInsight"}},
+        "choices":[
+          {"id":"choice_051","text":"Listen carefully","effect":{"time":10,"relationship":{},"corruption":1,"item":null}},
+          {"id":"choice_052","text":"Ignore","effect":{"time":5,"relationship":{},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_027",
+        "name": "Fire Drill Panic",
+        "triggerChance": 15,
+        "triggerZones": ["classroom_english","hallway_2"],
+        "maskModifiers":{"Fear Mask":{"bonus":"alertness"},"Rage Mask":{"bonus":"panicSuppression"}},
+        "choices":[
+          {"id":"choice_053","text":"Follow instructions","effect":{"time":10,"relationship":{"npc_008":2},"corruption":0,"item":null}},
+          {"id":"choice_054","text":"Run off","effect":{"time":5,"relationship":{"npc_008":-2},"corruption":2,"item":null}}
+        ]
+      },
+      {
+        "id": "event_028",
+        "name": "Secret Note Delivery",
+        "triggerChance": 20,
+        "triggerZones": ["hallway_3","library"],
+        "maskModifiers":{"Trickster Mask":{"bonus":"sneak"},"Grief Mask":{"bonus":"empathy"}},
+        "choices":[
+          {"id":"choice_055","text":"Deliver it honestly","effect":{"time":5,"relationship":{"student_012":5},"corruption":0,"item":null}},
+          {"id":"choice_056","text":"Read and keep it","effect":{"time":5,"relationship":{"student_012":-5},"corruption":3,"item":null}}
+        ]
+      },
+      {
+        "id": "event_029",
+        "name": "Library Ghost Story",
+        "triggerChance": 15,
+        "triggerZones": ["library"],
+        "maskModifiers":{"Fear Mask":{"bonus":"alertness"},"Joy Mask":{"bonus":"excitement"}},
+        "choices":[
+          {"id":"choice_057","text":"Listen attentively","effect":{"time":10,"relationship":{"npc_009":3},"corruption":0,"item":null}},
+          {"id":"choice_058","text":"Ignore and leave","effect":{"time":5,"relationship":{"npc_009":0},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_030",
+        "name": "Cafeteria Table Fight",
+        "triggerChance": 20,
+        "triggerZones": ["cafeteria"],
+        "maskModifiers":{"Rage Mask":{"bonus":"fight"},"Fear Mask":{"bonus":"avoid"}},
+        "choices":[
+          {"id":"choice_059","text":"Step in to help","effect":{"time":10,"relationship":{"student_013":5},"corruption":2,"item":null}},
+          {"id":"choice_060","text":"Stay out","effect":{"time":5,"relationship":{"student_013":-2},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_031",
+        "name": "Drama Club Rehearsal",
+        "triggerChance": 20,
+        "triggerZones": ["club_room_drama"],
+        "maskModifiers":{"Ambition Mask":{"bonus":"focus"},"Joy Mask":{"bonus":"charm"}},
+        "choices":[
+          {"id":"choice_061","text":"Participate actively","effect":{"time":30,"relationship":{"npc_024":5},"corruption":1,"item":null}},
+          {"id":"choice_062","text":"Stay in the background","effect":{"time":10,"relationship":{"npc_024":0},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_032",
+        "name": "Chemistry Lab Explosion",
+        "triggerChance": 15,
+        "triggerZones": ["classroom_science"],
+        "maskModifiers":{"Fear Mask":{"bonus":"alertness"},"Ambition Mask":{"bonus":"problemSolving"}},
+        "choices":[
+          {"id":"choice_063","text":"Help classmates","effect":{"time":15,"relationship":{"npc_025":5},"corruption":0,"item":"item_012"}},
+          {"id":"choice_064","text":"Run away","effect":{"time":5,"relationship":{"npc_025":-3},"corruption":2,"item":null}}
+        ]
+      },
+      {
+        "id": "event_033",
+        "name": "Lost Homework",
+        "triggerChance": 25,
+        "triggerZones": ["hallway_1","classroom_math"],
+        "maskModifiers":{"Trickster Mask":{"bonus":"creativeExcuse"},"Grief Mask":{"bonus":"apologetic"}},
+        "choices":[
+          {"id":"choice_065","text":"Confess to teacher","effect":{"time":5,"relationship":{"npc_002":5},"corruption":0,"item":null}},
+          {"id":"choice_066","text":"Blame someone else","effect":{"time":5,"relationship":{"npc_002":-5},"corruption":2,"item":null}}
+        ]
+      },
+      {
+        "id": "event_034",
+        "name": "Rivalry Challenge",
+        "triggerChance": 20,
+        "triggerZones": ["gym","sports_field"],
+        "maskModifiers":{"Rage Mask":{"bonus":"strength"},"Fear Mask":{"bonus":"caution"}},
+        "choices":[
+          {"id":"choice_067","text":"Accept challenge","effect":{"time":20,"relationship":{"npc_026":5},"corruption":2,"item":null}},
+          {"id":"choice_068","text":"Avoid confrontation","effect":{"time":10,"relationship":{"npc_026":-2},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_035",
+        "name": "Unexpected Visitor",
+        "triggerChance": 15,
+        "triggerZones": ["library","hallway_3"],
+        "maskModifiers":{"Ambition Mask":{"bonus":"focus"},"Joy Mask":{"bonus":"social"}},
+        "choices":[
+          {"id":"choice_069","text":"Greet politely","effect":{"time":5,"relationship":{"npc_027":5},"corruption":0,"item":null}},
+          {"id":"choice_070","text":"Ignore","effect":{"time":5,"relationship":{"npc_027":-3},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_036",
+        "name": "Midday Snack Mishap",
+        "triggerChance": 20,
+        "triggerZones": ["cafeteria"],
+        "maskModifiers":{"Trickster Mask":{"bonus":"sneak"},"Rage Mask":{"bonus":"frustration"}},
+        "choices":[
+          {"id":"choice_071","text":"Apologize for spilling","effect":{"time":5,"relationship":{"student_014":3},"corruption":0,"item":null}},
+          {"id":"choice_072","text":"Blame others","effect":{"time":5,"relationship":{"student_014":-3},"corruption":1,"item":null}}
+        ]
+      },
+      {
+        "id": "event_037",
+        "name": "Secret Club Meeting",
+        "triggerChance": 20,
+        "triggerZones": ["club_room_secret"],
+        "maskModifiers":{"Trickster Mask":{"bonus":"sneak"},"Fear Mask":{"bonus":"avoidDetection"}},
+        "choices":[
+          {"id":"choice_073","text":"Attend","effect":{"time":20,"relationship":{"npc_028":5},"corruption":1,"item":null}},
+          {"id":"choice_074","text":"Skip","effect":{"time":0,"relationship":{"npc_028":-2},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_038",
+        "name": "Hallway Gossip",
+        "triggerChance": 25,
+        "triggerZones": ["hallway_2"],
+        "maskModifiers":{"Joy Mask":{"bonus":"popularity"},"Grief Mask":{"bonus":"empathy"}},
+        "choices":[
+          {"id":"choice_075","text":"Spread gossip","effect":{"time":5,"relationship":{"student_015":-2},"corruption":2,"item":null}},
+          {"id":"choice_076","text":"Ignore","effect":{"time":5,"relationship":{"student_015":0},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_039",
+        "name": "Teacher's Surprise Quiz",
+        "triggerChance": 30,
+        "triggerZones": ["classroom_math","classroom_science"],
+        "maskModifiers":{"Ambition Mask":{"bonus":"scoreBoost"},"Fear Mask":{"bonus":"avoidMistake"}},
+        "choices":[
+          {"id":"choice_077","text":"Attempt answers","effect":{"time":15,"relationship":{"npc_003":0},"corruption":0,"item":"item_013"}},
+          {"id":"choice_078","text":"Skip quietly","effect":{"time":5,"relationship":{"npc_003":-2},"corruption":1,"item":null}}
+        ]
+      },
+      {
+        "id": "event_040",
+        "name": "Club Recruitment Day",
+        "triggerChance": 25,
+        "triggerZones": ["gym","library","hallway_1"],
+        "maskModifiers":{"Joy Mask":{"bonus":"charm"},"Ambition Mask":{"bonus":"focus"}},
+        "choices":[
+          {"id":"choice_079","text":"Join a club","effect":{"time":15,"relationship":{"npc_029":5},"corruption":0,"item":null}},
+          {"id":"choice_080","text":"Refuse","effect":{"time":5,"relationship":{"npc_029":-2},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_041",
+        "name": "Forgotten Assignment",
+        "triggerChance": 20,
+        "triggerZones": ["classroom_english","classroom_history"],
+        "maskModifiers":{"Ambition Mask":{"bonus":"focus"},"Trickster Mask":{"bonus":"coverUp"}},
+        "choices":[
+          {"id":"choice_081","text":"Confess to teacher","effect":{"time":5,"relationship":{"npc_001":5},"corruption":0,"item":null}},
+          {"id":"choice_082","text":"Lie about it","effect":{"time":5,"relationship":{"npc_001":-3},"corruption":2,"item":null}}
+        ]
+      },
+      {
+        "id": "event_042",
+        "name": "After School Errand",
+        "triggerChance": 20,
+        "triggerZones": ["hallway_1","hallway_3","player_home"],
+        "maskModifiers":{"Grief Mask":{"bonus":"helpful"},"Ambition Mask":{"bonus":"efficient"}},
+        "choices":[
+          {"id":"choice_083","text":"Complete errand","effect":{"time":20,"relationship":{"npc_030":5},"corruption":0,"item":"item_014"}},
+          {"id":"choice_084","text":"Ignore","effect":{"time":0,"relationship":{"npc_030":-2},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_043",
+        "name": "Library Quiet Contest",
+        "triggerChance": 15,
+        "triggerZones": ["library"],
+        "maskModifiers":{"Fear Mask":{"bonus":"focus"},"Joy Mask":{"bonus":"fun"}},
+        "choices":[
+          {"id":"choice_085","text":"Stay silent","effect":{"time":10,"relationship":{"npc_009":3},"corruption":0,"item":null}},
+          {"id":"choice_086","text":"Whisper to friend","effect":{"time":5,"relationship":{"npc_009":-2},"corruption":1,"item":null}}
+        ]
+      },
+      {
+        "id": "event_044",
+        "name": "Lost in Forest Path",
+        "triggerChance": 15,
+        "triggerZones": ["forest_path"],
+        "maskModifiers":{"Fear Mask":{"bonus":"navigation"},"Trickster Mask":{"bonus":"sneak"}},
+        "choices":[
+          {"id":"choice_087","text":"Find your way","effect":{"time":15,"relationship":{"npc_031":5},"corruption":0,"item":null}},
+          {"id":"choice_088","text":"Call for help","effect":{"time":5,"relationship":{"npc_031":0},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_045",
+        "name": "Nighttime Spirit Task",
+        "triggerChance": 25,
+        "triggerZones": ["shrine","player_home"],
+        "maskModifiers":{"Any Mask":{"bonus":"spiritFavor"}},
+        "choices":[
+          {"id":"choice_089","text":"Complete task","effect":{"time":20,"relationship":{},"corruption":2,"item":"item_015"}},
+          {"id":"choice_090","text":"Ignore task","effect":{"time":0,"relationship":{},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_046",
+        "name": "Cafeteria Food Fight",
+        "triggerChance": 20,
+        "triggerZones": ["cafeteria"],
+        "maskModifiers":{"Rage Mask":{"bonus":"strength"},"Trickster Mask":{"bonus":"mischief"}},
+        "choices":[
+          {"id":"choice_091","text":"Join the fight","effect":{"time":10,"relationship":{"student_016":5},"corruption":2,"item":null}},
+          {"id":"choice_092","text":"Avoid the fight","effect":{"time":5,"relationship":{"student_016":-2},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_047",
+        "name": "Library Book Theft",
+        "triggerChance": 15,
+        "triggerZones": ["library"],
+        "maskModifiers":{"Trickster Mask":{"bonus":"stealth"},"Fear Mask":{"bonus":"alertness"}},
+        "choices":[
+          {"id":"choice_093","text":"Return the book","effect":{"time":5,"relationship":{"npc_010":5},"corruption":0,"item":null}},
+          {"id":"choice_094","text":"Keep it secret","effect":{"time":5,"relationship":{"npc_010":-3},"corruption":2,"item":"item_016"}}
+        ]
+      },
+      {
+        "id": "event_048",
+        "name": "Art Club Exhibition",
+        "triggerChance": 20,
+        "triggerZones": ["club_room_art"],
+        "maskModifiers":{"Joy Mask":{"bonus":"charm"},"Ambition Mask":{"bonus":"focus"}},
+        "choices":[
+          {"id":"choice_095","text":"Participate","effect":{"time":15,"relationship":{"npc_032":5},"corruption":0,"item":null}},
+          {"id":"choice_096","text":"Watch silently","effect":{"time":5,"relationship":{"npc_032":0},"corruption":0,"item":null}}
+        ]
+      },
+      {
+        "id": "event_049",
+        "name": "Rainy Day Detention",
+        "triggerChance": 15,
+        "triggerZones": ["classroom_detention"],
+        "maskModifiers":{"Fear Mask":{"bonus":"patience"},"Grief Mask":{"bonus":"empathy"}},
+        "choices":[
+          {"id":"choice_097","text":"Serve detention quietly","effect":{"time":20,"relationship":{"npc_033":3},"corruption":0,"item":null}},
+          {"id":"choice_098","text":"Cause trouble","effect":{"time":10,"relationship":{"npc_033":-3},"corruption":2,"item":null}}
+        ]
+      },
+      {
+        "id": "event_050",
+        "name": "Nighttime Shrine Blessing",
+        "triggerChance": 25,
+        "triggerZones": ["shrine"],
+        "maskModifiers":{"Any Mask":{"bonus":"spiritualConnection"}},
+        "choices":[
+          {"id":"choice_099","text":"Pray sincerely","effect":{"time":10,"relationship":{},"corruption":0,"item":"item_017"}},
+          {"id":"choice_100","text":"Mock the ritual","effect":{"time":5,"relationship":{},"corruption":2,"item":null}}
+        ]
+      }
+  ]
+  
