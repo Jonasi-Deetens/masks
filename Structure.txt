@@ -1,0 +1,592 @@
+Here are structured gameplay ideas that fit a school-life psychological narrative game powered by the kitsune masks, using time-management, choices, and dual-life tension (daytime school → nighttime spirit world).
+
+I’ll give you:
+
+Daily gameplay loop
+
+Daytime mechanics (school life)
+
+Nighttime mechanics (masks, spirits, corruption)
+
+Systems that make choices matter
+
+Event ideas & consequences
+
+🌀 1. Daily Gameplay Loop (Core Structure)
+Morning
+
+Choose a mask to bring (only 1–2 masks per day to limit power abuse)
+
+Check your “inner state” (corruption %, mask relationship changes)
+
+School Day (Main gameplay)
+
+Every action takes time blocks (e.g., 15–60 minutes)
+
+Player chooses what to do in free periods or secretly in class
+
+Masks influence:
+
+dialogue options
+
+ability boosts
+
+risk levels
+
+moral alignment
+
+After School
+
+More open-ended time for:
+
+clubs
+
+social interactions
+
+errands
+
+following rumors
+
+Evening Home Recap
+
+Mask spirits comment on the day
+
+Player sees subtle consequences (text messages, rumors spreading, trust shifting)
+
+Stats update:
+
+Mask corruption
+
+Social bonds
+
+Mental stability
+
+Reputation
+
+Night
+
+Option A: Sleep (safer, stable)
+
+Option B: Sneak out wearing a mask (dangerous, rewarding)
+
+Visit shrine
+
+Explore nighttime locations
+
+Do “spirit tasks” requested by masks
+
+Encounter illusions or memory fragments
+
+Each day feels like a push-pull:
+
+Use masks to solve your problems → masks get stronger
+
+Resist them → school life gets harder
+
+🎒 2. Daytime Mechanics (School Life)
+
+Here’s where the psychology shines.
+
+📚 Classroom Choices
+
+Actions (each taking time):
+
+Pay attention
+
+Doze off
+
+Cheat on the test
+
+Whisper with classmates
+
+Use a mask ability secretly (risky)
+
+Examples with masks:
+
+Ambition Mask: highlight answers on a test
+
+Trickster Mask: create an illusion to distract teacher
+
+Loyalty Mask: help a friend but your own grade suffers
+
+Fear Mask: sense who is watching you cheat
+
+💬 Social Simulation
+
+Gossip system
+
+Relationship tracking
+
+Rumors influence how teachers & students treat you
+
+Masks heavily affect social conversations
+
+Examples:
+
+Joy Mask: boosts charm → you become popular faster
+
+Rage Mask: intimidate bullies → but gain a “violent reputation”
+
+Grief Mask: empathize deeply → people confide dark secrets
+
+🏃 Hallways / Between Classes
+
+Limited time segments:
+
+Check club room
+
+Talk to a crush
+
+Help a friend
+
+Track down someone suspicious (using Fear Mask)
+
+Escape a teacher looking for you
+
+🏆 School Reputation System
+
+Three axes:
+
+Academics
+
+Social standing
+
+Morality
+
+Masks shift you naturally, building long-term consequences.
+
+🌙 3. Nighttime Mechanics (Mystical Gameplay)
+🦊 Night Exploration
+
+Use masks freely at night → abilities stronger, consequences harsher
+
+Shrine (mask spirits live here)
+
+Abandoned streets
+
+Rooftop access
+
+Forest path → illusions & fragmented memories
+
+🔮 Spirit Contracts
+
+Masks give missions:
+
+Trick someone
+
+Steal a memory
+
+Protect a student
+
+Observe someone secretly
+
+Completing missions:
+
+Boosts mask relationship
+− Raises corruption
+± Alters next day’s events (a student shows up exhausted, missing, crying, terrified, overly friendly, etc.)
+
+🕳 Corruption Events (Nightmares)
+
+If corruption is too high:
+
+Nightmares become gameplay segments
+
+Player sees distorted versions of classmates
+
+Must escape their own subconscious
+
+🌒 Mask Whispers
+
+At night masks talk to you.
+Some argue with each other.
+Some demand obedience.
+Some try to warn you.
+
+You are never fully alone.
+
+🔧 4. Systems That Make Choices Matter
+✔ Time Pressure
+
+You never have enough time for everything.
+Your mask choice each morning changes the priorities.
+
+✔ Mask Corruption & Personality Merge
+
+Each mask has its own “influence meter.”
+Using a mask often:
+
+changes your dialogue
+
+shifts your morality
+
+changes visual UI cues
+
+distorts your worldview
+
+If a mask hits 100% corruption:
+
+You get a mask ending
+
+Lose access to other masks
+
+Reality warps to their personality
+
+✔ Rumor Network
+
+Students talk:
+
+“I saw you sneaking out at night.”
+
+“You stared at Mr. Tanaka like you were going to punch him.”
+
+“Why were you crying yesterday?”
+
+Rumors shape:
+
+Groups that accept/reject you
+
+How teachers treat you
+
+Whether someone trusts your help
+
+Masks can manipulate the rumor network.
+
+✔ Fragmented Memory System
+
+Certain nighttime events unlock lost memories.
+Memories change who you think you are…
+…sometimes contradicting each other.
+
+🎇 5. Event Ideas
+Morning Events
+
+Teacher confrontation
+
+“Did you study?” → mask influences your answer
+
+Classmate asks for help
+
+School Day Events
+
+Surprise test
+
+Bully interaction
+
+Clubs recruiting you
+
+Lockdown drill (Fear Mask very useful)
+
+Someone confesses a secret
+
+After School
+
+Follow rumors to uncover drama
+
+Help a classmate with their problem
+
+Return a lost item (or steal it using Trickster Mask)
+
+Meet your crush
+
+Suspicious teacher acting strangely
+
+Night Events
+
+Mask duel: two masks try to take control
+
+Fox spirit tests you
+
+“Urban legend” encounter
+
+Memory fragment of childhood
+
+Spirit marketplace where masks can “trade favors”
+
+🌟 Optional Twist
+
+Your real face is not shown until late game, and masks are slowly replacing your personality. You might eventually choose to:
+
+Break the masks
+
+Let one consume you
+
+Fuse all masks into a “True Self”
+
+Return them to the shrine and face reality
+
+-------
+
+
+PLAN: MOBILE NARRATIVE GAME WITH MASK SYSTEM + FREE-ROAM SCHOOL
+
+1. CORE GAME STRUCTURE
+   - Zone-based navigation (image-based screens with tap hotspots)
+   - Time system (advances only on major actions)
+   - Mask selection system (morning choice, single mask per day)
+   - Event system (random events triggered on entering zones)
+   - NPC interaction:
+       • dialogue trees
+       • relationship scores
+       • rumor system
+       • mask-influenced reactions
+   - Class minigames (5 templates, data-driven)
+   - Inventory system (collectible items, mask reagents, quest items)
+   - Corruption & mask influence system
+   - Night exploration system
+   - Database-driven content:
+       • masks
+       • NPC data
+       • zones
+       • minigames
+       • items
+       • event triggers
+
+2. TECH STACK
+   - Frontend: React Native + Expo (image-based zone screens)
+   - Navigation: React Navigation
+   - State Management: Zustand or React Context
+   - Database: Supabase or Firebase or local SQLite (async, offline)
+   - Asset system: PNG images per zone, per mask effect overlays
+   - JSON-driven minigames and events
+
+3. UI COMPONENTS
+   - ZoneScreen (ImageBackground + hotspots)
+   - HUD (time, mask corruption, reputation)
+   - ActionBar (Search, Talk, Mask, Menu)
+   - DialogueModal
+   - EventModal
+   - ClassModal
+   - MinigameLoader
+   - MaskOverlay
+   - InventoryModal
+   - DayRecapScreen
+
+4. DATA MODELS (GLOBAL)
+   - Mask
+   - NPC
+   - Zone
+   - Item
+   - Event
+   - Minigame
+   - PlayerState
+
+5. KEY SYSTEMS TO IMPLEMENT
+   - TimeManager
+   - MaskManager
+   - EventManager
+   - NPCManager
+   - MinigameEngine
+   - InventoryManager
+   - DialogueEngine
+
+6. CONTENT PIPELINE
+   - Create mask database entries
+   - Create NPC database entries
+   - Create items & events
+   - Create minigame templates
+   - Test zone-to-zone transitions
+   - Integrate daily cycle:
+       • morning mask select
+       • school free-roam
+       • afternoon events
+       • night exploration
+       • recap + sleep
+
+--- 
+
+DATA MODELS (DB FIRST)
+
+Below are the schemas for saving everything into a database.
+
+You can use this for:
+
+Supabase
+
+Firebase
+
+Prisma
+
+Drizzle
+
+local SQLite
+
+I’ll write it in JSON-like schema form.
+
+🎭 1. MASK MODEL
+mask
+{
+  id: string,
+  name: string,
+  alias: string,
+  description: string,
+  personality: string,
+  corruption: number,          // % per day (player specific)
+  abilities: {
+    hint: boolean,
+    dangerSense: boolean,
+    illusion: boolean,
+    empathy: boolean
+  },
+  dailyEffects: {
+    dialogueColor: string,      // UI effect
+    overlay: string,            // path to overlay image
+    bonusStats: {
+      charm: number,
+      insight: number,
+      chaos: number
+    }
+  },
+  corruptionTriggers: string[], // events that increase corruption
+  unlockRequirements: string[],
+  image: string,
+  symbol: string
+}
+
+👤 2. NPC MODEL
+{
+  id: string,
+  name: string,
+  role: string,
+  traits: string[],
+  personality: string,
+  schedule: {
+    time: string,
+    zoneId: string
+  }[],
+  relationship: number,        // 0–100
+  rumorScore: number,          // how much they influence gossip
+  reactions: {
+    mask_joy: string,
+    mask_fear: string,
+    mask_trick: string
+  },
+  events: string[],
+  portrait: string
+}
+
+🗺 3. ZONE MODEL
+
+{
+  id: string,
+  name: string,
+  image: string,
+  hotspots: {
+    targetZoneId: string,
+    x: number,
+    y: number,
+    w: number,
+    h: number
+  }[],
+  randomEvents: string[],
+  items: string[]
+}
+🎲 4. EVENT MODEL
+yaml
+Code kopiëren
+{
+  id: string,
+  name: string,
+  triggerChance: number,
+  triggerZones: string[],
+  maskModifiers: {
+    mask_joy: string,
+    mask_fear: string,
+    mask_trick: string
+  },
+  choices: {
+    id: string,
+    text: string,
+    effect: {
+      time: number,
+      relationship: { npcId: string, delta: number },
+      corruption: number,
+      item: string
+    }
+  }[]
+}
+🎮 5. MINIGAME MODEL
+Global minigame schema:
+typescript
+Code kopiëren
+{
+  id: string,
+  type: "quiz" | "scramble" | "match" | "trace" | "qte",
+  classId: string,
+  difficulty: number,
+  timer: number,
+  questions: any[],
+  maskModifiers: {
+    mask_joy: {},
+    mask_fear: {},
+    mask_trick: {}
+  }
+}
+
+6.Players model
+
+{
+  "id": "string",
+  "username": "string",
+  "avatar": "string",
+  "grade": "int",
+  "class": "string",
+  "currentMaskId": "mask_id",
+  "masksOwned": ["mask_id"],
+  "stats": {
+    "energy": "int",
+    "mood": "string",
+    "time": "string",
+    "reputation": "int"
+  },
+  "relationships": {
+    "npc_id": "int"  // score or affinity with NPCs
+  },
+  "inventory": [
+    {
+      "itemId": "string",
+      "quantity": "int"
+    }
+  ],
+  "minigameProgress": {
+    "minigameId": {
+      "score": "int",
+      "completed": "boolean"
+    }
+  },
+  "eventsCompleted": ["event_id"],
+  "location": "string",
+  "createdAt": "datetime",
+  "updatedAt": "datetime"
+}
+
+7. Item model
+
+{
+  "id": "string",
+  "name": "string",
+  "type": "consumable | equipment | quest",
+  "description": "string",
+  "effects": {
+    "energy": "int",
+    "mood": "string",
+    "relationship": {
+      "npc_id": "int"
+    }
+  },
+  "image": "string",
+  "createdAt": "datetime",
+  "updatedAt": "datetime"
+}
+
+relations:
+
+players ↔ masks: currentMaskId + masksOwned[]
+
+players ↔ npcs: relationships[npc_id]
+
+players ↔ minigames: minigameProgress[minigame_id]
+
+players ↔ events: eventsCompleted[]
+
+players ↔ items: inventory[item_id]

@@ -1,0 +1,589 @@
+[
+  // ================== CLASSROOM ACTIONS ==================
+  {
+    "id": "pay_attention_math",
+    "name": "Pay Attention in Math Class",
+    "zone": "classroom_math",
+    "preconditions": {},
+    "timeCost": 30,
+    "effects": {"reputation": 2, "grade": 5, "maskCorruption": 0, "relationships": {}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"grade": 2}, "Fear Mask": {"riskDetection": true}}
+  },
+  {
+    "id": "cheat_math_test",
+    "name": "Cheat on Math Test",
+    "zone": "classroom_math",
+    "preconditions": {"currentMask": ["Ambition Mask", "Trickster Mask"]},
+    "timeCost": 30,
+    "effects": {"reputation": -5, "grade": 10, "maskCorruption": 5, "relationships": {"teacher_math": -10}},
+    "riskLevel": "high",
+    "maskModifiers": {"Trickster Mask": {"successRate": 0.9}, "Fear Mask": {"detectionChance": -0.2}}
+  },
+  {
+    "id": "pay_attention_science",
+    "name": "Pay Attention in Science Class",
+    "zone": "classroom_science",
+    "preconditions": {},
+    "timeCost": 30,
+    "effects": {"reputation": 2, "grade": 5, "maskCorruption": 0, "relationships": {}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"grade": 2}, "Fear Mask": {"dangerSense": true}}
+  },
+  {
+    "id": "experiment_science",
+    "name": "Perform Science Experiment",
+    "zone": "classroom_science",
+    "preconditions": {},
+    "timeCost": 40,
+    "effects": {"grade": 7, "maskCorruption": 1, "relationships": {"teacher_science": 2}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Trickster Mask": {"successRate": 0.8}, "Fear Mask": {"riskDetection": true}}
+  },
+  {
+    "id": "pay_attention_history",
+    "name": "Pay Attention in History Class",
+    "zone": "classroom_history",
+    "preconditions": {},
+    "timeCost": 25,
+    "effects": {"grade": 5, "maskCorruption": 0, "relationships": {}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"grade": 2}}
+  },
+  {
+    "id": "whisper_classmate_history",
+    "name": "Whisper with Classmate in History",
+    "zone": "classroom_history",
+    "preconditions": {},
+    "timeCost": 15,
+    "effects": {"reputation": 1, "maskCorruption": 1, "relationships": {"npc_classmate": 2}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Trickster Mask": {"stealthBonus": 3}, "Joy Mask": {"relationshipBonus": 2}}
+  },
+  {
+    "id": "pay_attention_literature",
+    "name": "Pay Attention in Literature Class",
+    "zone": "classroom_literature",
+    "preconditions": {},
+    "timeCost": 30,
+    "effects": {"grade": 5, "maskCorruption": 0, "relationships": {}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"grade": 2}, "Grief Mask": {"empathyBoost": 3}}
+  },
+  {
+    "id": "read_poem_literature",
+    "name": "Read Poem Aloud",
+    "zone": "classroom_literature",
+    "preconditions": {},
+    "timeCost": 20,
+    "effects": {"reputation": 3, "maskCorruption": 1, "relationships": {"npc_classmate": 2}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Joy Mask": {"relationshipBonus": 3}, "Grief Mask": {"empathyBoost": 2}}
+  },
+  {
+    "id": "pay_attention_art",
+    "name": "Pay Attention in Art Class",
+    "zone": "classroom_art",
+    "preconditions": {},
+    "timeCost": 25,
+    "effects": {"grade": 5, "maskCorruption": 0, "relationships": {}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"grade": 2}, "Joy Mask": {"creativityBonus": 2}}
+  },
+  {
+    "id": "paint_art_project",
+    "name": "Work on Art Project",
+    "zone": "classroom_art",
+    "preconditions": {},
+    "timeCost": 40,
+    "effects": {"grade": 7, "maskCorruption": 1, "relationships": {"npc_art_friend": 3}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Joy Mask": {"creativityBonus": 3}}
+  },
+  {
+    "id": "pay_attention_music",
+    "name": "Pay Attention in Music Class",
+    "zone": "classroom_music",
+    "preconditions": {},
+    "timeCost": 30,
+    "effects": {"grade": 5, "maskCorruption": 0, "relationships": {}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"grade": 2}, "Joy Mask": {"performanceBonus": 2}}
+  },
+  {
+    "id": "play_instrument",
+    "name": "Practice Instrument",
+    "zone": "classroom_music",
+    "preconditions": {},
+    "timeCost": 35,
+    "effects": {"grade": 6, "maskCorruption": 1, "relationships": {"npc_music_friend": 2}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Joy Mask": {"performanceBonus": 3}}
+  },
+  {
+    "id": "pay_attention_pe",
+    "name": "Pay Attention in PE Class",
+    "zone": "classroom_pe",
+    "preconditions": {},
+    "timeCost": 25,
+    "effects": {"grade": 4, "maskCorruption": 0, "relationships": {}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"grade": 2}, "Rage Mask": {"strengthBonus": 2}}
+  },
+  {
+    "id": "exercise_pe",
+    "name": "Participate in Physical Exercise",
+    "zone": "classroom_pe",
+    "preconditions": {},
+    "timeCost": 30,
+    "effects": {"grade": 5, "maskCorruption": 1, "relationships": {"npc_pe_friend": 2}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Rage Mask": {"strengthBonus": 3}, "Fear Mask": {"awarenessBoost": 2}}
+  },
+  {
+    "id": "pay_attention_tech",
+    "name": "Pay Attention in Technology Class",
+    "zone": "classroom_tech",
+    "preconditions": {},
+    "timeCost": 30,
+    "effects": {"grade": 5, "maskCorruption": 0, "relationships": {}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"grade": 2}, "Trickster Mask": {"hackBonus": 2}}
+  },
+  {
+    "id": "build_robot_tech",
+    "name": "Work on Robot Project",
+    "zone": "classroom_tech",
+    "preconditions": {},
+    "timeCost": 45,
+    "effects": {"grade": 7, "maskCorruption": 1, "relationships": {"npc_tech_friend": 3}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Trickster Mask": {"hackBonus": 3}, "Ambition Mask": {"gradeBoost": 2}}
+  },
+
+  // ================== HALLWAY / SOCIAL ACTIONS ==================
+  {
+    "id": "help_friend",
+    "name": "Help a Friend",
+    "zone": "hallway_main",
+    "preconditions": {},
+    "timeCost": 15,
+    "effects": {"reputation": 3, "maskCorruption": 1, "relationships": {"npc_friend": 10}},
+    "riskLevel": "low",
+    "maskModifiers": {"Loyalty Mask": {"relationshipBonus": 5}, "Grief Mask": {"empathyBoost": 3}}
+  },
+  {
+    "id": "gossip_with_classmate",
+    "name": "Gossip with Classmate",
+    "zone": "hallway_second",
+    "preconditions": {},
+    "timeCost": 15,
+    "effects": {"reputation": 1, "maskCorruption": 1, "relationships": {"npc_classmate": 2}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Joy Mask": {"popularityBoost": 2}, "Trickster Mask": {"stealthBonus": 1}}
+  },
+  {
+    "id": "follow_rumor",
+    "name": "Follow a Rumor",
+    "zone": "courtyard",
+    "preconditions": {},
+    "timeCost": 20,
+    "effects": {"maskCorruption": 2, "relationships": {}, "items": ["clue_note"]},
+    "riskLevel": "medium",
+    "maskModifiers": {"Trickster Mask": {"stealthBonus": 3}}
+  },
+
+  // ================== CLUB / AFTER SCHOOL ==================
+  {
+    "id": "attend_art_club",
+    "name": "Attend Art Club",
+    "zone": "club_art",
+    "preconditions": {},
+    "timeCost": 45,
+    "effects": {"reputation": 2, "maskCorruption": 0, "relationships": {"npc_art_friend": 5}},
+    "riskLevel": "low",
+    "maskModifiers": {"Joy Mask": {"creativityBonus": 3}}
+  },
+  {
+    "id": "attend_music_club",
+    "name": "Attend Music Club",
+    "zone": "club_music",
+    "preconditions": {},
+    "timeCost": 45,
+    "effects": {"reputation": 2, "maskCorruption": 0, "relationships": {"npc_music_friend": 5}},
+    "riskLevel": "low",
+    "maskModifiers": {"Joy Mask": {"performanceBonus": 3}}
+  },
+  {
+    "id": "attend_science_club",
+    "name": "Attend Science Club",
+    "zone": "club_science",
+    "preconditions": {},
+    "timeCost": 45,
+    "effects": {"reputation": 2, "maskCorruption": 1, "relationships": {"npc_science_friend": 5}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"gradeBoost": 2}}
+  },
+  {
+    "id": "attend_drama_club",
+    "name": "Attend Drama Club",
+    "zone": "club_drama",
+    "preconditions": {},
+    "timeCost": 45,
+    "effects": {"reputation": 3, "maskCorruption": 1, "relationships": {"npc_drama_friend": 5}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Joy Mask": {"charismaBonus": 3}}
+  },
+  {
+    "id": "attend_literature_club",
+    "name": "Attend Literature Club",
+    "zone": "club_literature",
+    "preconditions": {},
+    "timeCost": 45,
+    "effects": {"reputation": 2, "maskCorruption": 0, "relationships": {"npc_literature_friend": 5}},
+    "riskLevel": "low",
+    "maskModifiers": {"Grief Mask": {"empathyBoost": 2}}
+  },
+  {
+    "id": "attend_sports_club",
+    "name": "Attend Sports Club",
+    "zone": "club_sports",
+    "preconditions": {},
+    "timeCost": 45,
+    "effects": {"reputation": 2, "maskCorruption": 1, "relationships": {"npc_pe_friend": 5}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Rage Mask": {"strengthBonus": 3}}
+  },
+  {
+    "id": "attend_tech_club",
+    "name": "Attend Technology Club",
+    "zone": "club_tech",
+    "preconditions": {},
+    "timeCost": 45,
+    "effects": {"reputation": 2, "maskCorruption": 1, "relationships": {"npc_tech_friend": 5}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Trickster Mask": {"hackBonus": 3}}
+  },
+
+  // ================== NIGHT / MASK TASKS ==================
+  {
+    "id": "night_spirit_task",
+    "name": "Complete Spirit Task",
+    "zone": "shrine",
+    "preconditions": {"currentMask": ["any"]},
+    "timeCost": 40,
+    "effects": {"maskCorruption": 5, "relationships": {}, "items": ["spirit_reward"]},
+    "riskLevel": "high",
+    "maskModifiers": {"Ambition Mask": {"successRate": 0.8}, "Trickster Mask": {"stealthBonus": 5}, "Fear Mask": {"dangerDetection": true}}
+  },
+  {
+    "id": "night_mask_duel",
+    "name": "Mask Duel",
+    "zone": "forest_path",
+    "preconditions": {"currentMask": ["any"]},
+    "timeCost": 30,
+    "effects": {"maskCorruption": 10, "relationships": {}, "items": ["duel_reward"]},
+    "riskLevel": "high",
+    "maskModifiers": {"Rage Mask": {"damageBonus": 5}, "Trickster Mask": {"dodgeBonus": 3}}
+  },
+  {
+    "id": "explore_rooftop",
+    "name": "Explore Rooftop",
+    "zone": "rooftop",
+    "preconditions": {},
+    "timeCost": 20,
+    "effects": {"maskCorruption": 2, "relationships": {}, "items": ["found_note"]},
+    "riskLevel": "medium",
+    "maskModifiers": {"Fear Mask": {"dangerDetection": true}}
+  },
+
+  // ================== ITEM USAGE ==================
+  {
+    "id": "use_item_energy_potion",
+    "name": "Use Energy Potion",
+    "zone": "any",
+    "preconditions": {"inventory": ["energy_potion"]},
+    "timeCost": 5,
+    "effects": {"energy": 20, "maskCorruption": 0, "items": {"energy_potion": -1}},
+    "riskLevel": "low",
+    "maskModifiers": {}
+  },
+  {
+    "id": "use_item_mask_cleanser",
+    "name": "Use Mask Cleanser",
+    "zone": "any",
+    "preconditions": {"inventory": ["mask_cleanser"]},
+    "timeCost": 5,
+    "effects": {"maskCorruption": -5, "items": {"mask_cleanser": -1}},
+    "riskLevel": "low",
+    "maskModifiers": {}
+  },
+{
+    "id": "pay_attention_philosophy",
+    "name": "Pay Attention in Philosophy Class",
+    "zone": "classroom_philosophy",
+    "preconditions": {},
+    "timeCost": 30,
+    "effects": {"grade": 5, "maskCorruption": 0, "relationships": {}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"grade": 2}, "Grief Mask": {"empathyBoost": 2}}
+  },
+  {
+    "id": "debate_philosophy",
+    "name": "Participate in Debate",
+    "zone": "classroom_philosophy",
+    "preconditions": {},
+    "timeCost": 40,
+    "effects": {"grade": 6, "maskCorruption": 1, "relationships": {"npc_philosophy_friend": 3}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Ambition Mask": {"gradeBoost": 2}, "Trickster Mask": {"persuasionBonus": 3}}
+  },
+  {
+    "id": "pay_attention_economics",
+    "name": "Pay Attention in Economics Class",
+    "zone": "classroom_economics",
+    "preconditions": {},
+    "timeCost": 30,
+    "effects": {"grade": 5, "maskCorruption": 0, "relationships": {}},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"grade": 2}}
+  },
+  {
+    "id": "solve_case_economics",
+    "name": "Solve Case Study",
+    "zone": "classroom_economics",
+    "preconditions": {},
+    "timeCost": 35,
+    "effects": {"grade": 6, "maskCorruption": 1, "relationships": {"npc_economics_friend": 2}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Ambition Mask": {"gradeBoost": 2}, "Trickster Mask": {"analysisBonus": 2}}
+  },
+
+  // ================== ADDITIONAL HALLWAY / SOCIAL ACTIONS ==================
+  {
+    "id": "talk_to_crush",
+    "name": "Talk to Crush",
+    "zone": "hallway_main",
+    "preconditions": {},
+    "timeCost": 20,
+    "effects": {"reputation": 2, "maskCorruption": 1, "relationships": {"npc_crush": 5}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Joy Mask": {"relationshipBonus": 3}, "Fear Mask": {"nervousnessReduction": 2}}
+  },
+  {
+    "id": "avoid_bully",
+    "name": "Avoid Bully Encounter",
+    "zone": "courtyard",
+    "preconditions": {},
+    "timeCost": 15,
+    "effects": {"maskCorruption": 1, "relationships": {}, "reputation": -1},
+    "riskLevel": "medium",
+    "maskModifiers": {"Fear Mask": {"avoidanceBonus": 3}, "Rage Mask": {"frustrationIncrease": 2}}
+  },
+  {
+    "id": "stand_up_to_bully",
+    "name": "Stand Up to Bully",
+    "zone": "courtyard",
+    "preconditions": {},
+    "timeCost": 20,
+    "effects": {"maskCorruption": 2, "relationships": {}, "reputation": 5},
+    "riskLevel": "high",
+    "maskModifiers": {"Rage Mask": {"intimidationBonus": 3}, "Joy Mask": {"popularityBonus": 2}}
+  },
+
+  // ================== ADDITIONAL CLUB ACTIONS ==================
+  {
+    "id": "attend_cooking_club",
+    "name": "Attend Cooking Club",
+    "zone": "club_cooking",
+    "preconditions": {},
+    "timeCost": 45,
+    "effects": {"reputation": 2, "maskCorruption": 0, "relationships": {"npc_cooking_friend": 4}},
+    "riskLevel": "low",
+    "maskModifiers": {"Joy Mask": {"creativityBonus": 2}}
+  },
+  {
+    "id": "attend_gaming_club",
+    "name": "Attend Gaming Club",
+    "zone": "club_gaming",
+    "preconditions": {},
+    "timeCost": 45,
+    "effects": {"reputation": 2, "maskCorruption": 1, "relationships": {"npc_gaming_friend": 4}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Trickster Mask": {"strategyBonus": 3}}
+  },
+  {
+    "id": "attend_gardening_club",
+    "name": "Attend Gardening Club",
+    "zone": "club_gardening",
+    "preconditions": {},
+    "timeCost": 40,
+    "effects": {"reputation": 1, "maskCorruption": 0, "relationships": {"npc_gardening_friend": 3}},
+    "riskLevel": "low",
+    "maskModifiers": {"Loyalty Mask": {"relationshipBonus": 2}} 
+  },
+
+  // ================== ADDITIONAL NIGHT / MASK TASKS ==================
+  {
+    "id": "steal_memory_night",
+    "name": "Steal a Memory",
+    "zone": "abandoned_streets",
+    "preconditions": {"currentMask": ["Trickster Mask"]},
+    "timeCost": 30,
+    "effects": {"maskCorruption": 7, "items": ["memory_fragment"], "relationships": {}},
+    "riskLevel": "high",
+    "maskModifiers": {"Trickster Mask": {"successRate": 0.9}}
+  },
+  {
+    "id": "protect_student_night",
+    "name": "Protect a Student",
+    "zone": "forest_path",
+    "preconditions": {"currentMask": ["Loyalty Mask"]},
+    "timeCost": 35,
+    "effects": {"maskCorruption": 5, "relationships": {"npc_target": 5}},
+    "riskLevel": "high",
+    "maskModifiers": {"Loyalty Mask": {"defenseBonus": 4}, "Fear Mask": {"dangerDetection": true}}
+  },
+  {
+    "id": "observe_suspicious_night",
+    "name": "Observe Suspicious Teacher",
+    "zone": "rooftop",
+    "preconditions": {"currentMask": ["Fear Mask"]},
+    "timeCost": 25,
+    "effects": {"maskCorruption": 3, "items": ["evidence_note"], "relationships": {}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Fear Mask": {"detectionBonus": 4}}
+  },
+  {
+    "id": "urban_legend_investigation",
+    "name": "Investigate Urban Legend",
+    "zone": "abandoned_gym",
+    "preconditions": {},
+    "timeCost": 30,
+    "effects": {"maskCorruption": 4, "items": ["legend_clue"], "relationships": {}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Trickster Mask": {"stealthBonus": 3}, "Fear Mask": {"awarenessBoost": 2}}
+  },
+
+  // ================== ADDITIONAL ITEM USAGE ==================
+  {
+    "id": "use_item_confidence_potion",
+    "name": "Use Confidence Potion",
+    "zone": "any",
+    "preconditions": {"inventory": ["confidence_potion"]},
+    "timeCost": 5,
+    "effects": {"reputation": 5, "maskCorruption": 0, "items": {"confidence_potion": -1}},
+    "riskLevel": "low",
+    "maskModifiers": {}
+  },
+  {
+    "id": "use_item_empathy_elixir",
+    "name": "Use Empathy Elixir",
+    "zone": "any",
+    "preconditions": {"inventory": ["empathy_elixir"]},
+    "timeCost": 5,
+    "effects": {"relationships": {"npc_target": 10}, "maskCorruption": 0, "items": {"empathy_elixir": -1}},
+    "riskLevel": "low",
+    "maskModifiers": {}
+  },
+{
+    "id": "help_classmate_homework",
+    "name": "Help Classmate with Homework",
+    "zone": "library",
+    "preconditions": {},
+    "timeCost": 25,
+    "effects": {"relationships": {"npc_study_friend": 5}, "maskCorruption": 1},
+    "riskLevel": "low",
+    "maskModifiers": {"Loyalty Mask": {"relationshipBonus": 2}, "Grief Mask": {"empathyBonus": 2}}
+  },
+  {
+    "id": "read_alone_library",
+    "name": "Read Alone in Library",
+    "zone": "library",
+    "preconditions": {},
+    "timeCost": 20,
+    "effects": {"grade": 3, "maskCorruption": 0},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"knowledgeGain": 2}}
+  },
+  {
+    "id": "clean_classroom",
+    "name": "Clean Classroom",
+    "zone": "classroom_general",
+    "preconditions": {},
+    "timeCost": 15,
+    "effects": {"reputation": 2, "maskCorruption": 0},
+    "riskLevel": "low",
+    "maskModifiers": {"Loyalty Mask": {"reputationBonus": 2}}
+  },
+  {
+    "id": "deliver_notes",
+    "name": "Deliver Notes to Friend",
+    "zone": "hallway_main",
+    "preconditions": {},
+    "timeCost": 10,
+    "effects": {"relationships": {"npc_friend": 3}, "maskCorruption": 0},
+    "riskLevel": "low",
+    "maskModifiers": {"Joy Mask": {"relationshipBonus": 2}}
+  },
+  {
+    "id": "practice_instrument",
+    "name": "Practice Musical Instrument",
+    "zone": "music_room",
+    "preconditions": {},
+    "timeCost": 30,
+    "effects": {"reputation": 3, "maskCorruption": 0},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"skillBoost": 2}, "Joy Mask": {"moodBoost": 1}}
+  },
+  {
+    "id": "sneak_snack",
+    "name": "Sneak a Snack in Hallway",
+    "zone": "hallway_main",
+    "preconditions": {"inventory": ["snack_item"]},
+    "timeCost": 5,
+    "effects": {"maskCorruption": 1, "items": {"snack_item": -1}},
+    "riskLevel": "medium",
+    "maskModifiers": {"Trickster Mask": {"stealthBonus": 2}}
+  },
+  {
+    "id": "night_rooftop_star_gazing",
+    "name": "Star Gazing on Rooftop",
+    "zone": "rooftop",
+    "preconditions": {"currentMask": ["Joy Mask"]},
+    "timeCost": 20,
+    "effects": {"maskCorruption": 0, "mood": "calm"},
+    "riskLevel": "low",
+    "maskModifiers": {"Joy Mask": {"moodBoost": 3}, "Grief Mask": {"reflectionBonus": 2}}
+  },
+  {
+    "id": "inspect_strange_noise",
+    "name": "Inspect Strange Noise",
+    "zone": "abandoned_corridor",
+    "preconditions": {},
+    "timeCost": 15,
+    "effects": {"maskCorruption": 3, "items": ["strange_clue"]},
+    "riskLevel": "high",
+    "maskModifiers": {"Fear Mask": {"alertBonus": 3}, "Trickster Mask": {"curiosityBonus": 2}}
+  },
+  {
+    "id": "practice_quiz_minigame",
+    "name": "Practice Quiz Minigame",
+    "zone": "library",
+    "preconditions": {},
+    "timeCost": 20,
+    "effects": {"grade": 4, "maskCorruption": 0},
+    "riskLevel": "low",
+    "maskModifiers": {"Ambition Mask": {"knowledgeBoost": 3}}
+  },
+  {
+    "id": "deliver_lost_item",
+    "name": "Deliver Lost Item to Student",
+    "zone": "hallway_main",
+    "preconditions": {"inventory": ["lost_item"]},
+    "timeCost": 15,
+    "effects": {"relationships": {"npc_target": 5}, "items": {"lost_item": -1}, "maskCorruption": 0},
+    "riskLevel": "low",
+    "maskModifiers": {"Loyalty Mask": {"relationshipBonus": 3}}
+  }
+]

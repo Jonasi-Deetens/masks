@@ -1,0 +1,140 @@
+[
+  {
+    "id": "classroom_math",
+    "name": "Math Classroom",
+    "type": "class",
+    "description": "Rows of desks with a blackboard full of equations."
+  },
+  {
+    "id": "classroom_science",
+    "name": "Science Lab",
+    "type": "class",
+    "description": "Beakers and microscopes line the counters; experiments in progress."
+  },
+  {
+    "id": "classroom_history",
+    "name": "History Classroom",
+    "type": "class",
+    "description": "Posters of historical events decorate the walls."
+  },
+  {
+    "id": "classroom_literature",
+    "name": "Literature Classroom",
+    "type": "class",
+    "description": "Bookshelves line the walls; the smell of old books fills the room."
+  },
+  {
+    "id": "classroom_art",
+    "name": "Art Room",
+    "type": "class",
+    "description": "Paints, brushes, and unfinished student projects everywhere."
+  },
+  {
+    "id": "classroom_music",
+    "name": "Music Room",
+    "type": "class",
+    "description": "Instruments scattered around; a piano stands in the corner."
+  },
+  {
+    "id": "classroom_pe",
+    "name": "Gym",
+    "type": "class",
+    "description": "Sports equipment and a basketball court; echoes of running footsteps."
+  },
+  {
+    "id": "library",
+    "name": "Library",
+    "type": "special",
+    "description": "Quiet space with tall shelves, tables, and reading nooks."
+  },
+  {
+    "id": "cafeteria",
+    "name": "Cafeteria",
+    "type": "special",
+    "description": "Long tables and food counters; students gather for meals and gossip."
+  },
+  {
+    "id": "courtyard",
+    "name": "Courtyard",
+    "type": "special",
+    "description": "Open space with benches and trees; sunlight streams in."
+  },
+  {
+    "id": "hallway_main",
+    "name": "Main Hallway",
+    "type": "hallway",
+    "description": "Lockers line the walls; students rush between classes."
+  },
+  {
+    "id": "hallway_second",
+    "name": "Second Floor Hallway",
+    "type": "hallway",
+    "description": "A quieter hallway with classrooms and notice boards."
+  },
+  {
+    "id": "nurse_office",
+    "name": "Nurse’s Office",
+    "type": "special",
+    "description": "A calm room with medical supplies and a cozy chair."
+  },
+  {
+    "id": "director_office",
+    "name": "Director’s Office",
+    "type": "special",
+    "description": "A large office with a desk, shelves, and a stern atmosphere."
+  },
+  {
+    "id": "teacher_lounge",
+    "name": "Teacher Lounge",
+    "type": "special",
+    "description": "Comfortable seating, coffee machine, teachers chat here."
+  },
+  {
+    "id": "stairwell",
+    "name": "Stairwell",
+    "type": "hallway",
+    "description": "Connects floors; always bustling between classes."
+  },
+  {
+    "id": "club_art",
+    "name": "Art Club Room",
+    "type": "special",
+    "description": "Dedicated space for art club projects with supplies and student works."
+  },
+  {
+    "id": "club_music",
+    "name": "Music Club Room",
+    "type": "special",
+    "description": "Room filled with instruments, sheet music, and practice spaces."
+  },
+  {
+    "id": "club_science",
+    "name": "Science Club Room",
+    "type": "special",
+    "description": "Tables with experiments, microscopes, and science posters."
+  },
+  {
+    "id": "club_literature",
+    "name": "Literature Club Room",
+    "type": "special",
+    "description": "Comfy reading corners, books, and discussion tables for literature club."
+  },
+  {
+    "id": "club_drama",
+    "name": "Drama Club Room",
+    "type": "special",
+    "description": "Props, costumes, and a small stage for drama rehearsals."
+  },
+  {
+    "id": "club_sports",
+    "name": "Sports Club Room",
+    "type": "special",
+    "description": "Equipment storage and strategy boards for various sports activities."
+  },
+  {
+    "id": "club_tech",
+    "name": "Technology Club Room",
+    "type": "special",
+    "description": "Computers, electronics kits, and project tables for coding and robotics."
+  }
+]

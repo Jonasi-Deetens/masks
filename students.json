@@ -1,0 +1,766 @@
+[
+  {
+    "id": "rio",
+    "name": "Rio Takahara",
+    "role": "Student",
+    "traits": ["kind", "timid", "overthinker"],
+    "personality": "Soft-spoken, anxious, and always apologizing.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "classA" },
+      { "time": "12:00", "zoneId": "courtyard" }
+    ],
+    "relationship": 30,
+    "rumorScore": 10,
+    "reactions": {
+      "mask_joy": "Feels safe around you.",
+      "mask_fear": "Relates to your anxiety.",
+      "mask_trick": "Gets nervous when you act unpredictable.",
+      "mask_anger": "Shuts down completely.",
+      "mask_sad": "Worries endlessly.",
+      "mask_wisdom": "Respects your calmness.",
+      "mask_love": "Blushes a lot.",
+      "mask_hatred": "Avoids you at all cost.",
+      "mask_empty": "Feels like you're not there anymore."
+    },
+    "events": ["rio_lost_pencil", "rio_breakdown"],
+    "portrait": "rio.png"
+  },
+
+  {
+    "id": "kaito",
+    "name": "Kaito Morozumi",
+    "role": "Student",
+    "traits": ["rebellious", "sarcastic", "secretly_soft"],
+    "personality": "Acts tough but is deeply loyal.",
+    "schedule": [
+      { "time": "09:00", "zoneId": "gym" },
+      { "time": "13:00", "zoneId": "hallway3" }
+    ],
+    "relationship": 20,
+    "rumorScore": 50,
+    "reactions": {
+      "mask_joy": "Calls you annoying.",
+      "mask_fear": "Mocks your fear but protects you.",
+      "mask_trick": "Enjoys your chaos.",
+      "mask_anger": "Loves it. Wants to fight together.",
+      "mask_sad": "Panics when you look depressed.",
+      "mask_wisdom": "Thinks you're boring.",
+      "mask_love": "Gets flustered and angry.",
+      "mask_hatred": "Gets competitive and hostile.",
+      "mask_empty": "Feels betrayed by your numbness."
+    },
+    "events": ["kaito_fight_event", "kaito_detention"],
+    "portrait": "kaito.png"
+  },
+
+  {
+    "id": "aoi",
+    "name": "Aoi Minase",
+    "role": "Student",
+    "traits": ["organized", "perfectionist"],
+    "personality": "Always stressed by responsibility.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "classA" },
+      { "time": "12:00", "zoneId": "hallway1" }
+    ],
+    "relationship": 40,
+    "rumorScore": 25,
+    "reactions": {
+      "mask_joy": "Thinks you're unreliable.",
+      "mask_fear": "Worries for your mental health.",
+      "mask_trick": "Gets suspicious instantly.",
+      "mask_anger": "Scared to correct you.",
+      "mask_sad": "Shows compassion.",
+      "mask_wisdom": "Respects you deeply.",
+      "mask_love": "Feels awkward but flattered.",
+      "mask_hatred": "Feels unsafe.",
+      "mask_empty": "Doesn't know how to communicate with you."
+    },
+    "events": ["aoi_group_project", "aoi_reprimand_event"],
+    "portrait": "aoi.png"
+  },
+
+  {
+    "id": "yuki",
+    "name": "Yuki Samura",
+    "role": "Student",
+    "traits": ["confident", "social", "bold"],
+    "personality": "Queen bee energy with a hidden sincere side.",
+    "schedule": [
+      { "time": "09:00", "zoneId": "cafeteria" },
+      { "time": "13:00", "zoneId": "classB" }
+    ],
+    "relationship": 25,
+    "rumorScore": 60,
+    "reactions": {
+      "mask_joy": "Thinks you're attention-seeking.",
+      "mask_fear": "Pities you in public.",
+      "mask_trick": "Plays along, but only if it's fun.",
+      "mask_anger": "Challenges your attitude.",
+      "mask_sad": "Softens a bit.",
+      "mask_wisdom": "Treats you seriously.",
+      "mask_love": "Uses it to tease you.",
+      "mask_hatred": "Gets confrontational.",
+      "mask_empty": "Feels uncomfortable—can't read you."
+    },
+    "events": ["yuki_rumor_event", "yuki_party_invite"],
+    "portrait": "yuki.png"
+  },
+
+  {
+    "id": "haruto",
+    "name": "Haruto Jin",
+    "role": "Student",
+    "traits": ["smart", "introverted"],
+    "personality": "Quiet but insightful.",
+    "schedule": [
+      { "time": "10:00", "zoneId": "library" },
+      { "time": "12:00", "zoneId": "courtyard" }
+    ],
+    "relationship": 30,
+    "rumorScore": 15,
+    "reactions": {
+      "mask_joy": "Feels awkward around your energy.",
+      "mask_fear": "Understands you well.",
+      "mask_trick": "Finds illusions childish.",
+      "mask_anger": "Avoids you immediately.",
+      "mask_sad": "Feels empathy.",
+      "mask_wisdom": "Talks more than usual.",
+      "mask_love": "Gets overwhelmed.",
+      "mask_hatred": "Closes off.",
+      "mask_empty": "Feels analytical interest."
+    },
+    "events": ["haruto_tutor_event", "haruto_lose_book"],
+    "portrait": "haruto.png"
+  },
+
+  {
+    "id": "mei",
+    "name": "Mei Kobayashi",
+    "role": "Student",
+    "traits": ["shy", "gamer", "awkward"],
+    "personality": "Blushes at everything, loves handheld consoles.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "classB" },
+      { "time": "12:00", "zoneId": "library" }
+    ],
+    "relationship": 35,
+    "rumorScore": 5,
+    "reactions": {
+      "mask_joy": "Smiles shyly.",
+      "mask_fear": "Feels protective.",
+      "mask_trick": "Gets overwhelmed by chaos.",
+      "mask_anger": "Terrified.",
+      "mask_sad": "Tries to comfort you.",
+      "mask_wisdom": "Listens quietly.",
+      "mask_love": "Faints internally.",
+      "mask_hatred": "Runs away.",
+      "mask_empty": "Feels strangely calm around you."
+    },
+    "events": ["mei_gaming_event"],
+    "portrait": "mei.png"
+  },
+
+  {
+    "id": "sora",
+    "name": "Sora Inoue",
+    "role": "Student",
+    "traits": ["energetic", "loud", "optimistic"],
+    "personality": "Bounces around like a golden retriever.",
+    "schedule": [
+      { "time": "09:00", "zoneId": "field" },
+      { "time": "14:00", "zoneId": "gym" }
+    ],
+    "relationship": 20,
+    "rumorScore": 20,
+    "reactions": {
+      "mask_joy": "Loves it!",
+      "mask_fear": "Doesn't understand your fear.",
+      "mask_trick": "Excited by illusions.",
+      "mask_anger": "Gets competitive.",
+      "mask_sad": "Gets confused and sad too.",
+      "mask_wisdom": "Tries to impress you.",
+      "mask_love": "Thinks you're best friends.",
+      "mask_hatred": "Gets scared.",
+      "mask_empty": "Stops talking."
+    },
+    "events": ["sora_race_event"],
+    "portrait": "sora.png"
+  },
+
+  {
+    "id": "nari",
+    "name": "Nari Akechi",
+    "role": "Student",
+    "traits": ["nosy", "gossipy", "observant"],
+    "personality": "Knows everyone's secrets.",
+    "schedule": [
+      { "time": "12:00", "zoneId": "hallway2" },
+      { "time": "15:00", "zoneId": "cafeteria" }
+    ],
+    "relationship": 10,
+    "rumorScore": 70,
+    "reactions": {
+      "mask_joy": "Spreads rumors about your fake positivity.",
+      "mask_fear": "Says you're paranoid.",
+      "mask_trick": "Fears you'll expose her.",
+      "mask_anger": "Avoids.",
+      "mask_sad": "Uses it for gossip.",
+      "mask_wisdom": "Feels judged.",
+      "mask_love": "Makes up stories.",
+      "mask_hatred": "Keeps distance.",
+      "mask_empty": "Thinks you're creepy."
+    },
+    "events": ["nari_gossip_event"],
+    "portrait": "nari.png"
+  },
+
+  {
+    "id": "ken",
+    "name": "Ken Yamada",
+    "role": "Student",
+    "traits": ["relaxed", "skater", "friendly"],
+    "personality": "Too chill to care.",
+    "schedule": [
+      { "time": "10:00", "zoneId": "courtyard" },
+      { "time": "14:00", "zoneId": "hallway3" }
+    ],
+    "relationship": 25,
+    "rumorScore": 10,
+    "reactions": {
+      "mask_joy": "Thinks you're vibing.",
+      "mask_fear": "Tells you to relax.",
+      "mask_trick": "Loves the antics.",
+      "mask_anger": "Avoids conflict.",
+      "mask_sad": "Offers you snacks.",
+      "mask_wisdom": "Doesn't get it.",
+      "mask_love": "Thinks you're clingy.",
+      "mask_hatred": "Backs away slowly.",
+      "mask_empty": "Shrugs and chills."
+    },
+    "events": ["ken_skate_event"],
+    "portrait": "ken.png"
+  },
+
+  {
+    "id": "hina",
+    "name": "Hina Kurosawa",
+    "role": "Student",
+    "traits": ["artsy", "quiet", "moody"],
+    "personality": "Lives in sketchbooks.",
+    "schedule": [
+      { "time": "11:00", "zoneId": "art_room" },
+      { "time": "15:00", "zoneId": "courtyard" }
+    ],
+    "relationship": 20,
+    "rumorScore": 15,
+    "reactions": {
+      "mask_joy": "Sketches you as a clown.",
+      "mask_fear": "Understands fear well.",
+      "mask_trick": "Sketches illusions.",
+      "mask_anger": "Hides.",
+      "mask_sad": "Feels seen by you.",
+      "mask_wisdom": "Sketches your posture.",
+      "mask_love": "Blushes but hides it.",
+      "mask_hatred": "Sketches you as a demon.",
+      "mask_empty": "Sketches you as a ghost."
+    },
+    "events": ["hina_art_event"],
+    "portrait": "hina.png"
+  },
+{
+    "id": "takumi",
+    "name": "Takumi Hoshino",
+    "role": "Student",
+    "traits": ["photographer", "quiet", "curious"],
+    "personality": "Always carries a camera, watches events unfold.",
+    "schedule": [
+      { "time": "09:00", "zoneId": "photoclub" },
+      { "time": "13:00", "zoneId": "library" }
+    ],
+    "relationship": 20,
+    "rumorScore": 15,
+    "reactions": {
+      "mask_joy": "Snaps photos mischievously.",
+      "mask_fear": "Photographs cautiously.",
+      "mask_trick": "Captures pranks happily.",
+      "mask_anger": "Hides behind camera.",
+      "mask_sad": "Comforts silently.",
+      "mask_wisdom": "Observes analytically.",
+      "mask_love": "Takes romantic shots.",
+      "mask_hatred": "Records suspiciously.",
+      "mask_empty": "Feels neutral."
+    },
+    "events": ["photo_exhibit_event"],
+    "portrait": "takumi.png"
+  },
+  {
+    "id": "mika",
+    "name": "Mika Satou",
+    "role": "Student",
+    "traits": ["cheerful", "team_player", "optimistic"],
+    "personality": "Sports club leader, motivates others constantly.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "gym" },
+      { "time": "12:00", "zoneId": "field" }
+    ],
+    "relationship": 35,
+    "rumorScore": 30,
+    "reactions": {
+      "mask_joy": "Matches your energy, high fives you.",
+      "mask_fear": "Encourages you to try harder.",
+      "mask_trick": "Laughs and plays along.",
+      "mask_anger": "Pushes back against aggression.",
+      "mask_sad": "Worries for you.",
+      "mask_wisdom": "Respects your planning.",
+      "mask_love": "Acts flustered around you.",
+      "mask_hatred": "Gets defensive.",
+      "mask_empty": "Tries to engage but fails."
+    },
+    "events": ["cheer_practice_event"],
+    "portrait": "mika.png"
+  },
+  {
+    "id": "ryo",
+    "name": "Ryo Fujimoto",
+    "role": "Student",
+    "traits": ["nerdy", "analytical", "curious"],
+    "personality": "Computer club, loves coding and solving logic puzzles.",
+    "schedule": [
+      { "time": "10:00", "zoneId": "computer_lab" },
+      { "time": "14:00", "zoneId": "library" }
+    ],
+    "relationship": 25,
+    "rumorScore": 20,
+    "reactions": {
+      "mask_joy": "Distracted by your antics.",
+      "mask_fear": "Feels empathy, wants to help.",
+      "mask_trick": "Fascinated by your illusions.",
+      "mask_anger": "Cautious, steps back.",
+      "mask_sad": "Analyzes your sadness.",
+      "mask_wisdom": "Nods in agreement.",
+      "mask_love": "Confused by your affection.",
+      "mask_hatred": "Defensive.",
+      "mask_empty": "Finds you intriguing."
+    },
+    "events": ["code_challenge_event"],
+    "portrait": "ryo.png"
+  },
+  {
+    "id": "emiko",
+    "name": "Emiko Taniguchi",
+    "role": "Student",
+    "traits": ["fashionable", "vain", "social"],
+    "personality": "Fashion club leader, always in style.",
+    "schedule": [
+      { "time": "11:00", "zoneId": "fashion_room" },
+      { "time": "15:00", "zoneId": "cafeteria" }
+    ],
+    "relationship": 30,
+    "rumorScore": 50,
+    "reactions": {
+      "mask_joy": "Rolls eyes but smiles.",
+      "mask_fear": "Thinks you're dramatic.",
+      "mask_trick": "Laughs, secretly impressed.",
+      "mask_anger": "Gets offended.",
+      "mask_sad": "Feels awkward.",
+      "mask_wisdom": "Seeks advice.",
+      "mask_love": "Teases you relentlessly.",
+      "mask_hatred": "Feels threatened.",
+      "mask_empty": "Dislikes your emptiness."
+    },
+    "events": ["fashion_show_event"],
+    "portrait": "emiko.png"
+  },
+  {
+    "id": "sho",
+    "name": "Sho Nakamura",
+    "role": "Student",
+    "traits": ["musical", "sensitive", "introverted"],
+    "personality": "Music club pianist, shy but talented.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "music_room" },
+      { "time": "12:00", "zoneId": "library" }
+    ],
+    "relationship": 35,
+    "rumorScore": 10,
+    "reactions": {
+      "mask_joy": "Distracted by bright energy.",
+      "mask_fear": "Relates and comforts silently.",
+      "mask_trick": "Annoyed by pranks.",
+      "mask_anger": "Feels threatened.",
+      "mask_sad": "Understands deeply.",
+      "mask_wisdom": "Appreciates guidance.",
+      "mask_love": "Blushes.",
+      "mask_hatred": "Avoids eye contact.",
+      "mask_empty": "Finds it unnerving."
+    },
+    "events": ["piano_recital_event"],
+    "portrait": "sho.png"
+  },
+  {
+    "id": "nana",
+    "name": "Nana Yoshida",
+    "role": "Student",
+    "traits": ["dramatic", "extroverted", "creative"],
+    "personality": "Drama club, loves attention and theatrics.",
+    "schedule": [
+      { "time": "10:00", "zoneId": "drama_room" },
+      { "time": "15:00", "zoneId": "hallway1" }
+    ],
+    "relationship": 25,
+    "rumorScore": 45,
+    "reactions": {
+      "mask_joy": "Plays along happily.",
+      "mask_fear": "Overreacts to your worry.",
+      "mask_trick": "Imitates your tricks.",
+      "mask_anger": "Acts outraged theatrically.",
+      "mask_sad": "Cries together.",
+      "mask_wisdom": "Rolls eyes slightly.",
+      "mask_love": "Flirts back.",
+      "mask_hatred": "Plots revenge in play.",
+      "mask_empty": "Confused by blankness."
+    },
+    "events": ["drama_rehearsal_event"],
+    "portrait": "nana.png"
+  },
+  {
+    "id": "tomo",
+    "name": "Tomo Ishikawa",
+    "role": "Student",
+    "traits": ["athletic", "competitive", "focused"],
+    "personality": "Track and field club, highly disciplined.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "track" },
+      { "time": "13:00", "zoneId": "gym" }
+    ],
+    "relationship": 20,
+    "rumorScore": 30,
+    "reactions": {
+      "mask_joy": "Finds your energy distracting.",
+      "mask_fear": "Coaches you through anxiety.",
+      "mask_trick": "Annoyed by your pranks.",
+      "mask_anger": "Matches your aggression.",
+      "mask_sad": "Encourages you gently.",
+      "mask_wisdom": "Respects your strategy.",
+      "mask_love": "Feels awkward.",
+      "mask_hatred": "Challenges your hostility.",
+      "mask_empty": "Doesn't understand you."
+    },
+    "events": ["track_race_event"],
+    "portrait": "tomo.png"
+  },
+  {
+    "id": "rin",
+    "name": "Rin Okamoto",
+    "role": "Student",
+    "traits": ["quiet", "mysterious", "artistic"],
+    "personality": "Draws comics in corners, speaks little.",
+    "schedule": [
+      { "time": "11:00", "zoneId": "art_room" },
+      { "time": "14:00", "zoneId": "library" }
+    ],
+    "relationship": 15,
+    "rumorScore": 10,
+    "reactions": {
+      "mask_joy": "Observes silently.",
+      "mask_fear": "Feels cautious empathy.",
+      "mask_trick": "Smiles faintly.",
+      "mask_anger": "Avoids confrontation.",
+      "mask_sad": "Shares quiet understanding.",
+      "mask_wisdom": "Nods once.",
+      "mask_love": "Blushes faintly.",
+      "mask_hatred": "Ignores you.",
+      "mask_empty": "Feels familiar calm."
+    },
+    "events": ["rin_comic_event"],
+    "portrait": "rin.png"
+  },
+  {
+    "id": "kai",
+    "name": "Kai Suzuki",
+    "role": "Student",
+    "traits": ["techy", "obsessive", "smart"],
+    "personality": "Robotics club, builds gadgets constantly.",
+    "schedule": [
+      { "time": "10:00", "zoneId": "robotics_lab" },
+      { "time": "15:00", "zoneId": "computer_lab" }
+    ],
+    "relationship": 20,
+    "rumorScore": 25,
+    "reactions": {
+      "mask_joy": "Distracted, keeps building.",
+      "mask_fear": "Analyzes your fear scientifically.",
+      "mask_trick": "Wants to test your tricks.",
+      "mask_anger": "Defensive, aggressive builds.",
+      "mask_sad": "Analyzes for patterns.",
+      "mask_wisdom": "Respects intellect.",
+      "mask_love": "Uncomfortable.",
+      "mask_hatred": "Builds defense systems.",
+      "mask_empty": "Feels curious, almost intrigued."
+    },
+    "events": ["robotics_competition"],
+    "portrait": "kai.png"
+  },
+  {
+    "id": "yui",
+    "name": "Yui Hara",
+    "role": "Student",
+    "traits": ["cheerful", "helpful", "friendly"],
+    "personality": "Library club, helps everyone.",
+    "schedule": [
+      { "time": "09:00", "zoneId": "library" },
+      { "time": "13:00", "zoneId": "classC" }
+    ],
+    "relationship": 35,
+    "rumorScore": 15,
+    "reactions": {
+      "mask_joy": "Matches positivity.",
+      "mask_fear": "Supports you gently.",
+      "mask_trick": "Laughs but warns.",
+      "mask_anger": "Tries to calm you.",
+      "mask_sad": "Offers comfort.",
+      "mask_wisdom": "Learns from you.",
+      "mask_love": "Gets shy.",
+      "mask_hatred": "Wary of you.",
+      "mask_empty": "Feels distant."
+    },
+    "events": ["book_sorting_event"],
+    "portrait": "yui.png"
+  },
+  {
+    "id": "ryota",
+    "name": "Ryota Kageyama",
+    "role": "Student",
+    "traits": ["delinquent", "reckless", "charismatic"],
+    "personality": "Leader of a small troublemaking group, enjoys challenges.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "classC" },
+      { "time": "12:00", "zoneId": "courtyard" }
+    ],
+    "relationship": 15,
+    "rumorScore": 60,
+    "reactions": {
+      "mask_joy": "Annoys him but intrigued.",
+      "mask_fear": "Mocks you.",
+      "mask_trick": "Loves mischief.",
+      "mask_anger": "Joins your aggression.",
+      "mask_sad": "Confused, sometimes kind.",
+      "mask_wisdom": "Underestimates you.",
+      "mask_love": "Gets flustered.",
+      "mask_hatred": "Challenges immediately.",
+      "mask_empty": "Feels uneasy around you."
+    },
+    "events": ["ryota_brawl_event", "graffiti_event"],
+    "portrait": "ryota.png"
+  },
+  {
+    "id": "keiko",
+    "name": "Keiko Mizuno",
+    "role": "Student",
+    "traits": ["sarcastic", "shy", "intelligent"],
+    "personality": "Quietly clever, avoids drama but notices everything.",
+    "schedule": [
+      { "time": "09:00", "zoneId": "classA" },
+      { "time": "14:00", "zoneId": "library" }
+    ],
+    "relationship": 30,
+    "rumorScore": 10,
+    "reactions": {
+      "mask_joy": "Finds your happiness naive.",
+      "mask_fear": "Worries silently.",
+      "mask_trick": "Observes, does not react immediately.",
+      "mask_anger": "Disapproves quietly.",
+      "mask_sad": "Relates internally.",
+      "mask_wisdom": "Appreciates insight.",
+      "mask_love": "Blushes faintly.",
+      "mask_hatred": "Avoids confrontation.",
+      "mask_empty": "Feels mysterious."
+    },
+    "events": ["keiko_study_group"],
+    "portrait": "keiko.png"
+  },
+  {
+    "id": "daisuke",
+    "name": "Daisuke Fujiwara",
+    "role": "Student",
+    "traits": ["athletic", "stubborn", "competitive"],
+    "personality": "Sports club rival, never backs down.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "gym" },
+      { "time": "13:00", "zoneId": "track" }
+    ],
+    "relationship": 20,
+    "rumorScore": 35,
+    "reactions": {
+      "mask_joy": "Thinks you are too carefree.",
+      "mask_fear": "Challenges you.",
+      "mask_trick": "Tries to outsmart you.",
+      "mask_anger": "Matches aggression.",
+      "mask_sad": "Confused by vulnerability.",
+      "mask_wisdom": "Respects your strategy.",
+      "mask_love": "Feels awkward.",
+      "mask_hatred": "Becomes a rival.",
+      "mask_empty": "Doesn't understand you."
+    },
+    "events": ["track_rivalry_event"],
+    "portrait": "daisuke.png"
+  },
+  {
+    "id": "ayaka",
+    "name": "Ayaka Nishimura",
+    "role": "Student",
+    "traits": ["quiet", "thoughtful", "mysterious"],
+    "personality": "Often alone, reads in hidden spots.",
+    "schedule": [
+      { "time": "11:00", "zoneId": "library" },
+      { "time": "15:00", "zoneId": "classC" }
+    ],
+    "relationship": 25,
+    "rumorScore": 15,
+    "reactions": {
+      "mask_joy": "Finds energy overwhelming.",
+      "mask_fear": "Relates and calms you.",
+      "mask_trick": "Watches silently.",
+      "mask_anger": "Avoids conflict.",
+      "mask_sad": "Comforts silently.",
+      "mask_wisdom": "Respects your insight.",
+      "mask_love": "Blushes faintly.",
+      "mask_hatred": "Shuns you.",
+      "mask_empty": "Feels a strange kinship."
+    },
+    "events": ["ayaka_secret_notes"],
+    "portrait": "ayaka.png"
+  },
+  {
+    "id": "shun",
+    "name": "Shun Kobayashi",
+    "role": "Student",
+    "traits": ["techy", "prankster", "sarcastic"],
+    "personality": "Loves gadgets and pranks, often tinkering with devices.",
+    "schedule": [
+      { "time": "10:00", "zoneId": "computer_lab" },
+      { "time": "14:00", "zoneId": "hallway2" }
+    ],
+    "relationship": 15,
+    "rumorScore": 40,
+    "reactions": {
+      "mask_joy": "Annoys him but amused.",
+      "mask_fear": "Mocks cautiously.",
+      "mask_trick": "Encourages your mischief.",
+      "mask_anger": "Matches aggression in playful way.",
+      "mask_sad": "Feels slightly concerned.",
+      "mask_wisdom": "Curious about your plan.",
+      "mask_love": "Flirts back jokingly.",
+      "mask_hatred": "Challenges immediately.",
+      "mask_empty": "Feels uneasy."
+    },
+    "events": ["shun_hack_event", "shun_prank_event"],
+    "portrait": "shun.png"
+  },
+  {
+    "id": "emi",
+    "name": "Emi Fujita",
+    "role": "Student",
+    "traits": ["optimistic", "friendly", "cheerful"],
+    "personality": "Always tries to lift others’ moods.",
+    "schedule": [
+      { "time": "09:00", "zoneId": "cafeteria" },
+      { "time": "13:00", "zoneId": "courtyard" }
+    ],
+    "relationship": 40,
+    "rumorScore": 10,
+    "reactions": {
+      "mask_joy": "Loves your energy.",
+      "mask_fear": "Comforts you.",
+      "mask_trick": "Laughs at pranks.",
+      "mask_anger": "Calms you down.",
+      "mask_sad": "Hugs you.",
+      "mask_wisdom": "Curious but respects it.",
+      "mask_love": "Flirts cheerfully.",
+      "mask_hatred": "Avoids conflict.",
+      "mask_empty": "Feels neutral."
+    },
+    "events": ["emi_help_event"],
+    "portrait": "emi.png"
+  },
+  {
+    "id": "ryu",
+    "name": "Ryu Hayashi",
+    "role": "Student",
+    "traits": ["strong", "silent", "mysterious"],
+    "personality": "A loner who avoids most interaction, strong presence.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "gym" },
+      { "time": "12:00", "zoneId": "courtyard" }
+    ],
+    "relationship": 10,
+    "rumorScore": 30,
+    "reactions": {
+      "mask_joy": "Finds you annoying.",
+      "mask_fear": "Doesn’t care.",
+      "mask_trick": "Amused silently.",
+      "mask_anger": "Respects strength.",
+      "mask_sad": "Ignores sadness.",
+      "mask_wisdom": "Acknowledges insight.",
+      "mask_love": "Feels awkward.",
+      "mask_hatred": "Challenges you silently.",
+      "mask_empty": "Feels unsettling presence."
+    },
+    "events": ["ryu_alone_event"],
+    "portrait": "ryu.png"
+  },
+  {
+    "id": "ayumi",
+    "name": "Ayumi Takeda",
+    "role": "Student",
+    "traits": ["bookish", "quiet", "curious"],
+    "personality": "Spends most time in the library, likes mysteries.",
+    "schedule": [
+      { "time": "09:00", "zoneId": "library" },
+      { "time": "14:00", "zoneId": "classB" }
+    ],
+    "relationship": 25,
+    "rumorScore": 10,
+    "reactions": {
+      "mask_joy": "Feels overwhelmed.",
+      "mask_fear": "Relates silently.",
+      "mask_trick": "Studies your tricks academically.",
+      "mask_anger": "Avoids confrontation.",
+      "mask_sad": "Feels empathy.",
+      "mask_wisdom": "Nods silently.",
+      "mask_love": "Blushes faintly.",
+      "mask_hatred": "Withdraws.",
+      "mask_empty": "Feels like a blank slate."
+    },
+    "events": ["ayumi_mystery_event"],
+    "portrait": "ayumi.png"
+  },
+  {
+    "id": "takashi",
+    "name": "Takashi Mori",
+    "role": "Student",
+    "traits": ["rebellious", "loud", "confident"],
+    "personality": "Class clown and troublemaker, loves attention.",
+    "schedule": [
+      { "time": "10:00", "zoneId": "hallway3" },
+      { "time": "13:00", "zoneId": "gym" }
+    ],
+    "relationship": 15,
+    "rumorScore": 50,
+    "reactions": {
+      "mask_joy": "Matches energy and mocks.",
+      "mask_fear": "Teases.",
+      "mask_trick": "Loves mischief.",
+      "mask_anger": "Matches chaos.",
+      "mask_sad": "Feels awkward.",
+      "mask_wisdom": "Dismissive.",
+      "mask_love": "Teases playfully.",
+      "mask_hatred": "Directly confronts.",
+      "mask_empty": "Feels strange about you."
+    },
+    "events": ["takashi_prank_event"],
+    "portrait": "takashi.png"
+  },
+
+]

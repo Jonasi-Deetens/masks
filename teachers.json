@@ -1,0 +1,210 @@
+[
+  {
+    "id": "t_hanabira",
+    "name": "Ms. Hana Hanabira",
+    "role": "Math Teacher",
+    "traits": ["strict", "precise", "easily_impressed"],
+    "personality": "Disciplined and expects order.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "classA" },
+      { "time": "13:00", "zoneId": "faculty_room" }
+    ],
+    "relationship": 20,
+    "rumorScore": 10,
+    "reactions": {
+      "mask_joy": "Annoyed—too cheerful.",
+      "mask_fear": "Concerned for your anxiety.",
+      "mask_trick": "Hates tricks and mischief."
+    },
+    "events": ["math_pop_quiz", "teacher_strict_warning"],
+    "portrait": "teacher_hanabira.png"
+  },
+  {
+    "id": "t_kuroda",
+    "name": "Mr. Ren Kuroda",
+    "role": "Literature Teacher",
+    "traits": ["poetic", "forgetful", "soft"],
+    "personality": "Gentle but absent-minded.",
+    "schedule": [
+      { "time": "09:00", "zoneId": "classB" },
+      { "time": "14:00", "zoneId": "library" }
+    ],
+    "relationship": 30,
+    "rumorScore": 15,
+    "reactions": {
+      "mask_joy": "Smiles warmly.",
+      "mask_fear": "Comforting.",
+      "mask_trick": "Confused by your mischief."
+    },
+    "events": ["lost_books_event"],
+    "portrait": "teacher_kuroda.png"
+  },
+  {
+    "id": "t_arakawa",
+    "name": "Ms. Yume Arakawa",
+    "role": "Science Teacher",
+    "traits": ["logical", "sharp", "observant"],
+    "personality": "Speaks quickly, expects sharp minds.",
+    "schedule": [
+      { "time": "10:00", "zoneId": "lab" },
+      { "time": "15:00", "zoneId": "faculty_room" }
+    ],
+    "relationship": 25,
+    "rumorScore": 20,
+    "reactions": {
+      "mask_joy": "Suspicious of constant optimism.",
+      "mask_fear": "Respects caution.",
+      "mask_trick": "Recognizes manipulation instantly."
+    },
+    "events": ["chem_spill_event"],
+    "portrait": "teacher_arakawa.png"
+  },
+  {
+    "id": "t_ishida",
+    "name": "Mr. Kou Ishida",
+    "role": "History Teacher",
+    "traits": ["calm", "patient", "traditional"],
+    "personality": "Old-school thinker with a peaceful air.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "classC" },
+      { "time": "12:00", "zoneId": "courtyard" }
+    ],
+    "relationship": 40,
+    "rumorScore": 10,
+    "reactions": {
+      "mask_joy": "Finds your attitude refreshing.",
+      "mask_fear": "Offers grounding words.",
+      "mask_trick": "Disapproves of manipulation."
+    },
+    "events": ["notetaking_event"],
+    "portrait": "teacher_ishida.png"
+  },
+  {
+    "id": "t_miyu",
+    "name": "Ms. Miyu Sakurai",
+    "role": "Art Teacher",
+    "traits": ["creative", "unpredictable", "dreamy"],
+    "personality": "Lives in her imagination.",
+    "schedule": [
+      { "time": "11:00", "zoneId": "art_room" },
+      { "time": "15:00", "zoneId": "art_room" }
+    ],
+    "relationship": 35,
+    "rumorScore": 25,
+    "reactions": {
+      "mask_joy": "Loves the bright aura.",
+      "mask_fear": "Paints your fear in her mind.",
+      "mask_trick": "Finds mischief inspiring."
+    },
+    "events": ["art_trace_event"],
+    "portrait": "teacher_miyu.png"
+  },
+  {
+    "id": "t_tanaka",
+    "name": "Coach Tanaka",
+    "role": "PE Teacher",
+    "traits": ["loud", "confident", "motivational"],
+    "personality": "Always shouting but in a good way.",
+    "schedule": [
+      { "time": "09:00", "zoneId": "gym" },
+      { "time": "14:00", "zoneId": "field" }
+    ],
+    "relationship": 20,
+    "rumorScore": 40,
+    "reactions": {
+      "mask_joy": "Thinks you're slacking.",
+      "mask_fear": "Pushes you harder.",
+      "mask_trick": "Gets angry at mischief."
+    },
+    "events": ["pe_drill_event"],
+    "portrait": "teacher_tanaka.png"
+  },
+  {
+    "id": "t_haruno",
+    "name": "Ms. Haruno",
+    "role": "Music Teacher",
+    "traits": ["melodic", "sensitive", "empathetic"],
+    "personality": "Calm, soothing voice.",
+    "schedule": [
+      { "time": "08:00", "zoneId": "music_room" },
+      { "time": "13:00", "zoneId": "music_room" }
+    ],
+    "relationship": 45,
+    "rumorScore": 15,
+    "reactions": {
+      "mask_joy": "Matches your optimism.",
+      "mask_fear": "Speaks softly to comfort you.",
+      "mask_trick": "Finds illusions distracting."
+    },
+    "events": ["music_practice_event"],
+    "portrait": "teacher_haruno.png"
+  },
+  {
+    "id": "t_sudo",
+    "name": "Mr. Sudo",
+    "role": "IT Teacher",
+    "traits": ["tech_savvy", "sarcastic", "realistic"],
+    "personality": "Doesn't sugarcoat anything.",
+    "schedule": [
+      { "time": "10:00", "zoneId": "computer_lab" },
+      { "time": "16:00", "zoneId": "computer_lab" }
+    ],
+    "relationship": 15,
+    "rumorScore": 35,
+    "reactions": {
+      "mask_joy": "Annoyed by forced positivity.",
+      "mask_fear": "Thinks you're glitching.",
+      "mask_trick": "Loves clever illusions."
+    },
+    "events": ["system_crash_event"],
+    "portrait": "teacher_sudo.png"
+  },
+  {
+    "id": "t_nanase",
+    "name": "Mrs. Nanase",
+    "role": "Home Economics Teacher",
+    "traits": ["motherly", "kind", "observant"],
+    "personality": "Like a warm blanket around students.",
+    "schedule": [
+      { "time": "11:00", "zoneId": "home_ec_room" },
+      { "time": "14:00", "zoneId": "cafeteria" }
+    ],
+    "relationship": 50,
+    "rumorScore": 20,
+    "reactions": {
+      "mask_joy": "Thinks you're precious.",
+      "mask_fear": "Wants to feed you soup.",
+      "mask_trick": "Gives warning stare."
+    },
+    "events": ["baking_event"],
+    "portrait": "teacher_nanase.png"
+  },
+{
+  "id": "dir_kyobashi",
+  "name": "Mr. Kyobashi",
+  "role": "School Director",
+  "traits": ["intimidating", "strategic", "stern"],
+  "personality": "Calculating and always watching. His presence alone makes students straighten their posture.",
+  "schedule": [
+    { "time": "08:00", "zoneId": "office" },
+    { "time": "12:00", "zoneId": "hallway2" },
+    { "time": "15:00", "zoneId": "courtyard" }
+  ],
+  "relationship": 10,
+  "rumorScore": 80,
+  "reactions": {
+    "mask_joy": "Does not trust your smile. Thinks you're hiding something.",
+    "mask_fear": "Interprets your fear as weakness.",
+    "mask_trick": "Threatens suspension if you 'play games'.",
+    "mask_anger": "Warns you that aggression is 'not tolerated'.",
+    "mask_sad": "Shows no sympathy. Tells you to toughen up.",
+    "mask_wisdom": "Acknowledges your discipline.",
+    "mask_love": "Dismisses emotional behavior as childish.",
+    "mask_hatred": "Recognizes the darkness immediately and watches you closely.",
+    "mask_empty": "Is disturbed by the lack of emotion—keeps extra distance."
+  },
+  "events": ["director_interrogation", "summoned_to_office_event"],
+  "portrait": "director_kyobashi.png"
+}
+
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "id": "minigame_math",
+    "classId": "math",
+    "name": "Equation Sprint",
+    "description": "Solve equations under time pressure.",
+    "difficulty": 1,
+    "maskModifiers": {
+      "mask_wisdom": { "bonusScore": 15 },
+      "mask_anger": { "timePenalty": 3 },
+      "mask_fear": { "insightBonus": 5 }
+    },
+    "rewards": { "grade": 5, "insight": 2 }
+  },
+  {
+    "id": "minigame_literature",
+    "classId": "literature",
+    "name": "Interpret the Poem",
+    "description": "Choose meanings and emotional tones.",
+    "difficulty": 2,
+    "maskModifiers": {
+      "mask_sad": { "empathyBonus": 10 },
+      "mask_joy": { "charmBonus": 5 }
+    },
+    "rewards": { "grade": 4, "charm": 1 }
+  },
+  {
+    "id": "minigame_science",
+    "classId": "science",
+    "name": "Chemical Reaction Match",
+    "description": "Match reactions to their correct outcomes.",
+    "difficulty": 2,
+    "maskModifiers": {
+      "mask_wisdom": { "bonusScore": 20 },
+      "mask_trick": { "chaosBonus": 2 }
+    },
+    "rewards": { "grade": 6, "insight": 3 }
+  },
+  {
+    "id": "minigame_history",
+    "classId": "history",
+    "name": "Timeline Builder",
+    "description": "Place events in chronological order.",
+    "difficulty": 1,
+    "maskModifiers": {
+      "mask_wisdom": { "insightBonus": 10 },
+      "mask_empty": { "logicBoost": 5 }
+    },
+    "rewards": { "grade": 5, "insight": 2 }
+  },
+  {
+    "id": "minigame_art",
+    "classId": "art",
+    "name": "Color Harmony",
+    "description": "Select colors that match the given mood.",
+    "difficulty": 1,
+    "maskModifiers": {
+      "mask_joy": { "creativityBonus": 10 },
+      "mask_love": { "softToneBonus": 5 }
+    },
+    "rewards": { "grade": 4, "charm": 2 }
+  },
+  {
+    "id": "minigame_pe",
+    "classId": "pe",
+    "name": "Rhythm Sprint",
+    "description": "Tap in rhythm to maintain running pace.",
+    "difficulty": 2,
+    "maskModifiers": {
+      "mask_anger": { "speedBoost": 10 },
+      "mask_fear": { "staminaPenalty": 5 }
+    },
+    "rewards": { "grade": 3, "chaos": 1 }
+  },
+  {
+    "id": "minigame_music",
+    "classId": "music",
+    "name": "Note Memory",
+    "description": "Repeat sequences of musical notes.",
+    "difficulty": 2,
+    "maskModifiers": {
+      "mask_sad": { "accuracyBonus": 5 },
+      "mask_love": { "syncBonus": 3 }
+    },
+    "rewards": { "grade": 4, "insight": 1 }
+  },
+  {
+    "id": "minigame_it",
+    "classId": "it",
+    "name": "Code Debug",
+    "description": "Tap the faulty lines of code quickly.",
+    "difficulty": 3,
+    "maskModifiers": {
+      "mask_wisdom": { "logicBonus": 15 },
+      "mask_trick": { "chaosBonus": 4 }
+    },
+    "rewards": { "grade": 6, "insight": 4 }
+  },
+  {
+    "id": "minigame_homeec",
+    "classId": "home_ec",
+    "name": "Recipe Combo",
+    "description": "Pick correct ingredients before timer ends.",
+    "difficulty": 1,
+    "maskModifiers": {
+      "mask_love": { "charmBonus": 5 },
+      "mask_joy": { "speedBonus": 2 }
+    },
+    "rewards": { "grade": 3, "charm": 1 }
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "mask_joy",
+    "name": "Akari",
+    "alias": "Joy Mask",
+    "description": "A radiant fox mask that floods its wearer with optimism and charm. Its positivity can become denial.",
+    "personality": "Cheerful, enabling, obliviously manipulative",
+    "corruption": 0,
+    "abilities": { "hint": true, "dangerSense": false, "illusion": false, "empathy": true },
+    "dailyEffects": {
+      "dialogueColor": "#ffd6e8",
+      "overlay": "mask_joy_overlay.png",
+      "bonusStats": { "charm": 3, "insight": 0, "chaos": 0 }
+    },
+    "corruptionTriggers": ["ignore_negative_emotion", "fake_happiness", "lie_to_avoid_conflict"],
+    "unlockRequirements": [],
+    "image": "mask_joy.png",
+    "symbol": "☺︎"
+  },
+  {
+    "id": "mask_fear",
+    "name": "Kage",
+    "alias": "Fear Mask",
+    "description": "A shadowed mask that warns the wearer of hidden danger. Overuse leads to paranoia.",
+    "personality": "Hyper-alert, anxious, cautious to a fault",
+    "corruption": 0,
+    "abilities": { "hint": false, "dangerSense": true, "illusion": false, "empathy": false },
+    "dailyEffects": {
+      "dialogueColor": "#cbb9ff",
+      "overlay": "mask_fear_overlay.png",
+      "bonusStats": { "charm": 0, "insight": 4, "chaos": 0 }
+    },
+    "corruptionTriggers": ["enter_dark_zone", "threat_detected", "avoid_social_interaction"],
+    "unlockRequirements": [],
+    "image": "mask_fear.png",
+    "symbol": "⚠︎"
+  },
+  {
+    "id": "mask_trick",
+    "name": "Yoroi",
+    "alias": "Trickster Mask",
+    "description": "A playful mask that manipulates perception. It rewards cleverness but punishes dishonesty.",
+    "personality": "Chaotic, witty, unpredictable",
+    "corruption": 0,
+    "abilities": { "hint": false, "dangerSense": false, "illusion": true, "empathy": false },
+    "dailyEffects": {
+      "dialogueColor": "#ffe9a8",
+      "overlay": "mask_trick_overlay.png",
+      "bonusStats": { "charm": 1, "insight": 0, "chaos": 3 }
+    },
+    "corruptionTriggers": ["mislead_npc", "illusion_backfire", "reckless_choice"],
+    "unlockRequirements": [],
+    "image": "mask_trick.png",
+    "symbol": "♢"
+  },
+  {
+    "id": "mask_anger",
+    "name": "Rai",
+    "alias": "Anger Mask",
+    "description": "Crimson and fierce, this mask amplifies confidence and confrontation. Rage becomes addictive.",
+    "personality": "Aggressive, bold, confrontational",
+    "corruption": 0,
+    "abilities": { "hint": false, "dangerSense": true, "illusion": false, "empathy": false },
+    "dailyEffects": {
+      "dialogueColor": "#ffb0b0",
+      "overlay": "mask_anger_overlay.png",
+      "bonusStats": { "charm": -1, "insight": 1, "chaos": 4 }
+    },
+    "corruptionTriggers": ["fight_event", "threaten_npc", "choose_violence"],
+    "unlockRequirements": ["experience_conflict"],
+    "image": "mask_anger.png",
+    "symbol": "🔥"
+  },
+  {
+    "id": "mask_sad",
+    "name": "Umi",
+    "alias": "Sorrow Mask",
+    "description": "A pale mask that brings emotional clarity but sinks the wearer into melancholy.",
+    "personality": "Soft-spoken, self-reflective, heavy-hearted",
+    "corruption": 0,
+    "abilities": { "hint": true, "dangerSense": false, "illusion": false, "empathy": true },
+    "dailyEffects": {
+      "dialogueColor": "#b0d2ff",
+      "overlay": "mask_sad_overlay.png",
+      "bonusStats": { "charm": 0, "insight": 3, "chaos": -1 }
+    },
+    "corruptionTriggers": ["emotional_overload", "comfort_rejection", "choose_sad_option"],
+    "unlockRequirements": ["experience_loss_event"],
+    "image": "mask_sad.png",
+    "symbol": "☂︎"
+  },
+  {
+    "id": "mask_wisdom",
+    "name": "Hokori",
+    "alias": "Wisdom Mask",
+    "description": "A serene white mask with gold markings; it grants clarity but can cause detachment.",
+    "personality": "Calm, analytical, detached",
+    "corruption": 0,
+    "abilities": { "hint": true, "dangerSense": true, "illusion": false, "empathy": false },
+    "dailyEffects": {
+      "dialogueColor": "#e6ffd1",
+      "overlay": "mask_wisdom_overlay.png",
+      "bonusStats": { "charm": 0, "insight": 5, "chaos": -1 }
+    },
+    "corruptionTriggers": ["ignore_emotions_for_logic", "overanalyze", "cold_decision"],
+    "unlockRequirements": ["complete_three_classes"],
+    "image": "mask_wisdom.png",
+    "symbol": "✦"
+  },
+  {
+    "id": "mask_love",
+    "name": "Mirei",
+    "alias": "Affection Mask",
+    "description": "A soft pink mask that heightens attachment and vulnerability.",
+    "personality": "Warm, supportive, overly attached",
+    "corruption": 0,
+    "abilities": { "hint": true, "dangerSense": false, "illusion": false, "empathy": true },
+    "dailyEffects": {
+      "dialogueColor": "#ffc6dd",
+      "overlay": "mask_love_overlay.png",
+      "bonusStats": { "charm": 4, "insight": 1, "chaos": 0 }
+    },
+    "corruptionTriggers": ["jealousy_event", "neglected_relationship", "overtrust"],
+    "unlockRequirements": ["reach_relationship_60"],
+    "image": "mask_love.png",
+    "symbol": "♥︎"
+  },
+  {
+    "id": "mask_hatred",
+    "name": "Kuro",
+    "alias": "Hatred Mask",
+    "description": "Inverted colors, empty eyes; hatred sharpens instinct but burns connections.",
+    "personality": "Cold, vengeful, sharp-tongued",
+    "corruption": 0,
+    "abilities": { "hint": false, "dangerSense": true, "illusion": true, "empathy": false },
+    "dailyEffects": {
+      "dialogueColor": "#3e3e3e",
+      "overlay": "mask_hatred_overlay.png",
+      "bonusStats": { "charm": -2, "insight": 2, "chaos": 5 }
+    },
+    "corruptionTriggers": ["bully_event", "grudge_choice", "hurt_close_friend"],
+    "unlockRequirements": ["relationship_below_20"],
+    "image": "mask_hatred.png",
+    "symbol": "⛧"
+  },
+  {
+    "id": "mask_empty",
+    "name": "Shinku",
+    "alias": "Void Mask",
+    "description": "A pure white mask without expression. It silences all emotions.",
+    "personality": "Detached, numb, hyper-rational",
+    "corruption": 0,
+    "abilities": { "hint": false, "dangerSense": true, "illusion": false, "empathy": false },
+    "dailyEffects": {
+      "dialogueColor": "#ffffff",
+      "overlay": "mask_empty_overlay.png",
+      "bonusStats": { "charm": -3, "insight": 6, "chaos": 0 }
+    },
+    "corruptionTriggers": ["emotionless_choice", "reject_all_masks", "apathy_event"],
+    "unlockRequirements": ["corruption_50_all_masks"],
+    "image": "mask_empty.png",
+    "symbol": "□"
+  }
+]
