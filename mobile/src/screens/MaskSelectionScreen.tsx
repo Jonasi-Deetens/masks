@@ -7,9 +7,11 @@ import {
   ScrollView,
   Animated,
   Dimensions,
+  ActivityIndicator,
 } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { colors, spacing, fontSizes, borderRadius, shadows } from '../theme';
+import { trpc } from '../utils/trpc';
 import type { Mask } from '../types';
 
 const { width } = Dimensions.get('window');
@@ -25,64 +27,6 @@ type RootStackParamList = {
 type MaskSelectionScreenProps = {
   navigation: NativeStackNavigationProp<RootStackParamList, 'MaskSelection'>;
 };
-
-// Initial masks available to player
-const STARTER_MASKS: Mask[] = [
-  {
-    id: 'mask_joy',
-    name: 'Akari',
-    alias: 'Joy Mask',
-    description: 'A radiant fox mask that floods its wearer with optimism and charm.',
-    personality: 'Cheerful, enabling, obliviously manipulative',
-    corruption: 0,
-    abilities: { hint: true, dangerSense: false, illusion: false, empathy: true },
-    dailyEffects: {
-      dialogueColor: '#ffd6e8',
-      overlay: 'mask_joy_overlay.png',
-      bonusStats: { charm: 3, insight: 0, chaos: 0 },
-    },
-    corruptionTriggers: ['ignore_negative_emotion', 'fake_happiness'],
-    unlockRequirements: [],
-    image: 'mask_joy.png',
-    symbol: '☺︎',
-  },
-  {
-    id: 'mask_fear',
-    name: 'Kage',
-    alias: 'Fear Mask',
-    description: 'A shadowed mask that warns the wearer of hidden danger.',
-    personality: 'Hyper-alert, anxious, cautious to a fault',
-    corruption: 0,
-    abilities: { hint: false, dangerSense: true, illusion: false, empathy: false },
-    dailyEffects: {
-      dialogueColor: '#cbb9ff',
-      overlay: 'mask_fear_overlay.png',
-      bonusStats: { charm: 0, insight: 4, chaos: 0 },
-    },
-    corruptionTriggers: ['enter_dark_zone', 'threat_detected'],
-    unlockRequirements: [],
-    image: 'mask_fear.png',
-    symbol: '⚠︎',
-  },
-  {
-    id: 'mask_trick',
-    name: 'Yoroi',
-    alias: 'Trickster Mask',
-    description: 'A playful mask that manipulates perception and rewards cleverness.',
-    personality: 'Chaotic, witty, unpredictable',
-    corruption: 0,
-    abilities: { hint: false, dangerSense: false, illusion: true, empathy: false },
-    dailyEffects: {
-      dialogueColor: '#ffe9a8',
-      overlay: 'mask_trick_overlay.png',
-      bonusStats: { charm: 1, insight: 0, chaos: 3 },
-    },
-    corruptionTriggers: ['mislead_npc', 'illusion_backfire'],
-    unlockRequirements: [],
-    image: 'mask_trick.png',
-    symbol: '♢',
-  },
-];
 
 const MaskCard: React.FC<{
   mask: Mask;
@@ -211,12 +155,45 @@ const MaskCard: React.FC<{
 
 const MaskSelectionScreen: React.FC<MaskSelectionScreenProps> = ({ navigation }) => {
   const [selectedMask, setSelectedMask] = useState<string | null>(null);
+  
+  // Fetch masks from the backend
+  const { data: masks, isLoading, error } = trpc.masks.getAll.useQuery();
 
   const handleConfirm = () => {
     if (selectedMask) {
       navigation.navigate('Game', { maskId: selectedMask });
     }
   };
+
+  // Filter to only show starter masks (unlockRequirements is empty)
+  const starterMasks = masks?.filter(mask => {
+    const unlockReqs = mask.unlockRequirements as string[];
+    return !unlockReqs || unlockReqs.length === 0;
+  }) || [];
+
+  if (isLoading) {
+    return (
+      <View style={[styles.container, styles.centered]}>
+        <ActivityIndicator size="large" color={colors.primary} />
+        <Text style={styles.loadingText}>Loading masks...</Text>
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View style={[styles.container, styles.centered]}>
+        <Text style={styles.errorText}>Failed to load masks</Text>
+        <Text style={styles.errorDetail}>{error.message}</Text>
+        <TouchableOpacity
+          style={styles.retryButton}
+          onPress={() => navigation.goBack()}
+        >
+          <Text style={styles.retryButtonText}>Go Back</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -242,15 +219,31 @@ const MaskSelectionScreen: React.FC<MaskSelectionScreenProps> = ({ navigation })
         snapToInterval={width * 0.75 + spacing.md}
         decelerationRate="fast"
       >
-        {STARTER_MASKS.map((mask, index) => (
-          <MaskCard
-            key={mask.id}
-            mask={mask}
-            isSelected={selectedMask === mask.id}
-            onSelect={() => setSelectedMask(mask.id)}
-            index={index}
-          />
-        ))}
+        {starterMasks.map((mask, index) => {
+          // Parse JSON fields from database
+          const abilities = mask.abilities as Mask['abilities'];
+          const dailyEffects = mask.dailyEffects as Mask['dailyEffects'];
+          const corruptionTriggers = mask.corruptionTriggers as string[];
+          const unlockRequirements = mask.unlockRequirements as string[];
+          
+          const maskData: Mask = {
+            ...mask,
+            abilities,
+            dailyEffects,
+            corruptionTriggers,
+            unlockRequirements,
+          };
+          
+          return (
+            <MaskCard
+              key={mask.id}
+              mask={maskData}
+              isSelected={selectedMask === mask.id}
+              onSelect={() => setSelectedMask(mask.id)}
+              index={index}
+            />
+          );
+        })}
       </ScrollView>
 
       {/* Confirm Button */}
@@ -276,6 +269,39 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
+  },
+  centered: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadingText: {
+    color: colors.textSecondary,
+    fontSize: fontSizes.md,
+    marginTop: spacing.md,
+  },
+  errorText: {
+    color: colors.error,
+    fontSize: fontSizes.lg,
+    fontWeight: '600',
+    marginBottom: spacing.sm,
+  },
+  errorDetail: {
+    color: colors.textSecondary,
+    fontSize: fontSizes.sm,
+    marginBottom: spacing.lg,
+    textAlign: 'center',
+    paddingHorizontal: spacing.xl,
+  },
+  retryButton: {
+    backgroundColor: colors.primary,
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
+    borderRadius: borderRadius.md,
+  },
+  retryButtonText: {
+    color: colors.text,
+    fontSize: fontSizes.md,
+    fontWeight: '600',
   },
   header: {
     paddingTop: spacing.xxl + spacing.lg,

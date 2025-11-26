@@ -6,10 +6,12 @@ import {
   TouchableOpacity,
   ScrollView,
   Dimensions,
+  ActivityIndicator,
 } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
 import { colors, spacing, fontSizes, borderRadius, shadows } from '../theme';
+import { trpc } from '../utils/trpc';
 import HUD from '../components/HUD';
 import ZoneView from '../components/ZoneView';
 import ActionList from '../components/ActionList';
@@ -31,59 +33,71 @@ type GameScreenProps = {
   route: RouteProp<RootStackParamList, 'Game'>;
 };
 
-// Mock player state (will be replaced with tRPC queries)
-const mockPlayer = {
-  id: 'player_001',
-  username: 'Player',
-  energy: 100,
-  mood: 'neutral',
-  time: '08:00',
-  reputation: 0,
-  currentMaskId: 'mask_joy',
-  zoneId: 'hallway_main',
-};
-
-// Mock zone data
-const mockZone = {
-  id: 'hallway_main',
-  name: 'Main Hallway',
-  type: 'hallway',
-  description: 'Lockers line the walls; students rush between classes.',
-};
-
-// Mock NPCs in zone
-const mockNPCs = [
-  { id: 'rio', name: 'Rio Takahara', portrait: '😊' },
-  { id: 'kaito', name: 'Kaito Morozumi', portrait: '😎' },
-];
-
-// Mock actions
-const mockActions = [
-  { id: 'talk_rio', name: 'Talk to Rio', timeCost: 15, riskLevel: 'low' },
-  { id: 'explore', name: 'Explore Hallway', timeCost: 10, riskLevel: 'low' },
-  { id: 'go_class', name: 'Go to Class', timeCost: 5, riskLevel: 'low' },
-];
-
 const GameScreen: React.FC<GameScreenProps> = ({ navigation, route }) => {
   const { maskId } = route.params;
-  const [player, setPlayer] = useState(mockPlayer);
-  const [currentZone, setCurrentZone] = useState(mockZone);
+  
+  // Local player state (will be persisted to DB later)
+  const [player, setPlayer] = useState({
+    id: 'local_player',
+    username: 'Player',
+    energy: 100,
+    mood: 'neutral',
+    time: '08:00',
+    reputation: 0,
+    currentMaskId: maskId,
+    zoneId: 'hallway_main',
+  });
+  
+  const [currentZoneId, setCurrentZoneId] = useState('hallway_main');
   const [showDialogue, setShowDialogue] = useState(false);
   const [showEvent, setShowEvent] = useState(false);
-  const [selectedNPC, setSelectedNPC] = useState<typeof mockNPCs[0] | null>(null);
+  const [selectedNPC, setSelectedNPC] = useState<{ id: string; name: string; portrait: string } | null>(null);
 
-  const handleNPCTap = (npc: typeof mockNPCs[0]) => {
+  // Fetch current zone with NPCs based on time
+  const { data: zoneData, isLoading: zoneLoading } = trpc.zones.getWithNPCs.useQuery({
+    zoneId: currentZoneId,
+    time: player.time,
+  });
+
+  // Fetch actions for current zone
+  const { data: actions, isLoading: actionsLoading } = trpc.zones.getActions.useQuery(currentZoneId);
+
+  // Fetch all zones for navigation
+  const { data: allZones } = trpc.zones.getAll.useQuery();
+
+  // Fetch current mask data
+  const { data: currentMask } = trpc.masks.getById.useQuery(maskId);
+
+  const currentZone = zoneData?.zone;
+  const npcsInZone = zoneData?.npcs || [];
+
+  // Map NPCs to the format expected by ZoneView
+  const mappedNPCs = npcsInZone.map(npc => ({
+    id: npc.id,
+    name: npc.name,
+    portrait: npc.portrait || '👤',
+  }));
+
+  // Map actions to the format expected by ActionList
+  const mappedActions = (actions || []).map(action => ({
+    id: action.id,
+    name: action.name,
+    timeCost: action.timeCost,
+    riskLevel: action.riskLevel,
+  }));
+
+  const handleNPCTap = (npc: { id: string; name: string; portrait: string }) => {
     setSelectedNPC(npc);
     setShowDialogue(true);
   };
 
   const handleActionSelect = (actionId: string) => {
-    // Execute action - update time, stats, etc.
-    console.log('Executing action:', actionId);
+    const action = actions?.find(a => a.id === actionId);
+    const timeCost = action?.timeCost || 15;
     
-    // Mock time advancement
+    // Advance time
     const [hours, minutes] = player.time.split(':').map(Number);
-    const newMinutes = minutes + 15;
+    const newMinutes = minutes + timeCost;
     const newHours = hours + Math.floor(newMinutes / 60);
     const finalMinutes = newMinutes % 60;
     
@@ -95,9 +109,36 @@ const GameScreen: React.FC<GameScreenProps> = ({ navigation, route }) => {
   };
 
   const handleZoneChange = (zoneId: string) => {
-    console.log('Changing to zone:', zoneId);
-    // Would trigger zone transition animation and load new zone
+    setCurrentZoneId(zoneId);
+    setPlayer(prev => ({ ...prev, zoneId }));
   };
+
+  // Quick access zones for navigation bar
+  const quickAccessZones = allZones?.filter(z => 
+    ['classroom_math', 'cafeteria', 'library', 'courtyard', 'hallway_main'].includes(z.id)
+  ).slice(0, 4) || [];
+
+  const zoneEmojis: Record<string, string> = {
+    classroom: '📚',
+    cafeteria: '🍽️',
+    library: '📖',
+    courtyard: '🌳',
+    hallway: '🚶',
+    rooftop: '🌤️',
+    gym: '🏃',
+    auditorium: '🎭',
+  };
+
+  const getZoneEmoji = (zoneType: string) => zoneEmojis[zoneType] || '📍';
+
+  if (zoneLoading && !currentZone) {
+    return (
+      <View style={[styles.container, styles.centered]}>
+        <ActivityIndicator size="large" color={colors.primary} />
+        <Text style={styles.loadingText}>Loading zone...</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -115,17 +156,19 @@ const GameScreen: React.FC<GameScreenProps> = ({ navigation, route }) => {
       <View style={styles.gameArea}>
         {/* Zone View */}
         <ZoneView
-          zone={currentZone}
-          npcs={mockNPCs}
+          zone={currentZone || { id: currentZoneId, name: 'Loading...', type: 'hallway', description: '' }}
+          npcs={mappedNPCs}
           onNPCTap={handleNPCTap}
           onHotspotTap={handleZoneChange}
         />
 
         {/* Actions Panel */}
         <View style={styles.actionsPanel}>
-          <Text style={styles.actionsPanelTitle}>Available Actions</Text>
+          <Text style={styles.actionsPanelTitle}>
+            Available Actions {actionsLoading && '(loading...)'}
+          </Text>
           <ActionList
-            actions={mockActions}
+            actions={mappedActions}
             onActionSelect={handleActionSelect}
             playerEnergy={player.energy}
           />
@@ -134,30 +177,49 @@ const GameScreen: React.FC<GameScreenProps> = ({ navigation, route }) => {
 
       {/* Zone Navigation */}
       <View style={styles.zoneNav}>
-        <TouchableOpacity
-          style={styles.zoneNavButton}
-          onPress={() => handleZoneChange('classroom_math')}
-        >
-          <Text style={styles.zoneNavButtonText}>📚 Classroom</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.zoneNavButton}
-          onPress={() => handleZoneChange('cafeteria')}
-        >
-          <Text style={styles.zoneNavButtonText}>🍽️ Cafeteria</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.zoneNavButton}
-          onPress={() => handleZoneChange('library')}
-        >
-          <Text style={styles.zoneNavButtonText}>📖 Library</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.zoneNavButton}
-          onPress={() => handleZoneChange('courtyard')}
-        >
-          <Text style={styles.zoneNavButtonText}>🌳 Courtyard</Text>
-        </TouchableOpacity>
+        {quickAccessZones.length > 0 ? (
+          quickAccessZones.map(zone => (
+            <TouchableOpacity
+              key={zone.id}
+              style={[
+                styles.zoneNavButton,
+                currentZoneId === zone.id && styles.zoneNavButtonActive
+              ]}
+              onPress={() => handleZoneChange(zone.id)}
+            >
+              <Text style={styles.zoneNavButtonText}>
+                {getZoneEmoji(zone.type)} {zone.name.split(' ')[0]}
+              </Text>
+            </TouchableOpacity>
+          ))
+        ) : (
+          <>
+            <TouchableOpacity
+              style={styles.zoneNavButton}
+              onPress={() => handleZoneChange('classroom_math')}
+            >
+              <Text style={styles.zoneNavButtonText}>📚 Classroom</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.zoneNavButton}
+              onPress={() => handleZoneChange('cafeteria')}
+            >
+              <Text style={styles.zoneNavButtonText}>🍽️ Cafeteria</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.zoneNavButton}
+              onPress={() => handleZoneChange('library')}
+            >
+              <Text style={styles.zoneNavButtonText}>📖 Library</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.zoneNavButton}
+              onPress={() => handleZoneChange('courtyard')}
+            >
+              <Text style={styles.zoneNavButtonText}>🌳 Courtyard</Text>
+            </TouchableOpacity>
+          </>
+        )}
       </View>
 
       {/* Dialogue Modal */}
@@ -187,6 +249,15 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
+  centered: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadingText: {
+    color: colors.textSecondary,
+    fontSize: fontSizes.md,
+    marginTop: spacing.md,
+  },
   gameArea: {
     flex: 1,
   },
@@ -215,6 +286,10 @@ const styles = StyleSheet.create({
   zoneNavButton: {
     alignItems: 'center',
     padding: spacing.sm,
+  },
+  zoneNavButtonActive: {
+    backgroundColor: colors.primary + '30',
+    borderRadius: borderRadius.md,
   },
   zoneNavButtonText: {
     color: colors.textSecondary,
